@@ -82,7 +82,6 @@
         android:backgroundTint="#043A27"
         android:elevation="15dp"
         android:text="LOGIN"
-        android:onClick="login"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
