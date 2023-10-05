@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         Handler().postDelayed({
-            startActivity(Intent(this, Beranda::class.java))
+            startActivity(Intent(this, Login::class.java))
             finish()
         }, 2300)
     }
