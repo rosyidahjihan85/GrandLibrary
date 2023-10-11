@@ -13,16 +13,19 @@
         android:layout_height="wrap_content"
         android:text="Beranda"
         android:textColor="#FFFFFF"
-        android:textSize="39"
+        android:textSize="39dp"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="28dp" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="412dp"
-        android:layout_height="444dp"
-        app:srcCompat="@drawable/ellipse_5"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="80dp" />
+        android:layout_width="404dp"
+        android:layout_height="398dp"
+        android:layout_marginTop="148dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ellipse_5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
