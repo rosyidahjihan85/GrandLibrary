@@ -14,9 +14,6 @@
         android:theme="@style/Theme.GrandLibrary"
         tools:targetApi="31">
         <activity
-            android:name=".Activity_input_datapinjam"
-            android:exported="false" />
-        <activity
             android:name=".Login"
             android:exported="false" />
         <activity
