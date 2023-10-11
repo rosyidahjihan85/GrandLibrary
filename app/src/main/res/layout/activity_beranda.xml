@@ -19,13 +19,11 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="404dp"
-        android:layout_height="398dp"
-        android:layout_marginTop="148dp"
+        android:layout_width="412dp"
+        android:layout_height="444dp"
         android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ellipse_5" />
+        app:srcCompat="@drawable/ellipse_5"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="80dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
