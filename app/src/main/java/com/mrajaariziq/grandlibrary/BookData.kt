@@ -47,7 +47,7 @@ class BookData : AppCompatActivity() {
         binding.listdata.adapter = adapter
         binding.listdata.layoutManager= LinearLayoutManager(applicationContext, LinearLayoutManager. VERTICAL, false)
         binding.listdata.addItemDecoration(DividerItemDecoration(applicationContext, LinearLayoutManager.VERTICAL))
-        binding.btnplus.setOnClickListener{
+        binding.btnplusbook.setOnClickListener{
             startActivity(
                 Intent(this, input_databuku::class.java)
             )

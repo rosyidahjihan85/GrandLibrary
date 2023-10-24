@@ -18,7 +18,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnplus"
+        android:id="@+id/btnplusbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="628dp"
@@ -42,7 +42,7 @@
         app:srcCompat="@drawable/rectangle_14" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/homebook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -52,7 +52,7 @@
         app:srcCompat="@drawable/vector" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/srcbook"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
@@ -68,7 +68,7 @@
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/icnbookcari"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
