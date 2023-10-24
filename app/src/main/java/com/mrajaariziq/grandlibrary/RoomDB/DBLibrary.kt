@@ -8,6 +8,8 @@ import androidx.room.RoomDatabase
 @Database (entities = [DataBuku::class, DataPinjam::class], version = 1)
 abstract class DBLibrary :RoomDatabase() {
     abstract fun librarydao():LibraryDAO
+
+
     companion object{
         @Volatile
         private var instance :DBLibrary? = null

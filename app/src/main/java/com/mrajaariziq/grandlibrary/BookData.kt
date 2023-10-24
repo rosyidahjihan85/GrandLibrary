@@ -27,6 +27,7 @@ class BookData : AppCompatActivity() {
     private var dataid = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_book_data)
 
         binding = ActivityBookDataBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -83,17 +84,14 @@ class BookData : AppCompatActivity() {
         binding.listdata.layoutManager = LinearLayoutManager(this)
         CoroutineScope(Dispatchers.IO).launch {
             val data = db.librarydao().getAllBuku()
-            adapter.Setdata(data)
+            adapter.setData(data)
             withContext(Dispatchers.Main){
                 adapter.notifyDataSetChanged()
             }
         }
         binding.listdata.adapter= adapter
     }
+
 }
 
 
-override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_book_data)
-    }
