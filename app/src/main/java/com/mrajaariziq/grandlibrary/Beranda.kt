@@ -10,12 +10,5 @@ class Beranda : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_beranda)
     }
-    fun ini (view: View){
-        val buku = Intent (this, BookData::class.java)
-        startActivity(buku)
-    }
-    fun itu (view: View){
-        val Pinjam = Intent (this, LoanData::class.java)
-        startActivity(Pinjam)
-    }
+
 }
