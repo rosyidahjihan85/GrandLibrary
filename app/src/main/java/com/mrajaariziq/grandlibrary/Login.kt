@@ -8,11 +8,8 @@ import android.widget.Button
 import com.mrajaariziq.grandlibrary.databinding.ActivityLoginBinding
 
 class Login : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
     }
-
-
 }
