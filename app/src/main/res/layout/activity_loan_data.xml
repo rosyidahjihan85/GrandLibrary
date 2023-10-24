@@ -18,7 +18,7 @@
         app:layout_constraintVertical_bias="0.015" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
+        android:id="@+id/btnplusLoan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="628dp"
@@ -52,7 +52,7 @@
         app:srcCompat="@drawable/data_pinjam" />
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/homeLoan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -62,7 +62,7 @@
         app:srcCompat="@drawable/vector" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/srcLoan"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
@@ -75,7 +75,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView16"
+        android:id="@+id/icnLoancari"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"

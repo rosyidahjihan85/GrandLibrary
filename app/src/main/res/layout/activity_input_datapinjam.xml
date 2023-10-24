@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/nmPin"
         android:layout_width="360dp"
         android:layout_height="60dp"
         android:layout_marginTop="88dp"
@@ -46,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/judulPin"
         android:layout_width="360dp"
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
@@ -57,10 +57,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/nmPin" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/tglPin"
         android:layout_width="360dp"
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
@@ -71,10 +71,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/judulPin" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/batasWkt"
         android:layout_width="360dp"
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
@@ -85,16 +85,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/tglPin" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="328dp"
-        android:layout_height="65dp"
+        android:id="@+id/SimpinputPin"
+        android:layout_width="302dp"
+        android:layout_height="62dp"
         android:layout_marginBottom="100dp"
-        android:text="Simpan Data"
-        android:textColor="@color/black"
         android:backgroundTint="#9AE0C7"
+        android:text="Simpan Data"
+        android:textColor="#14543D"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
