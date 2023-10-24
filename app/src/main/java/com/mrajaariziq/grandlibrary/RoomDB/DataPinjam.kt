@@ -6,18 +6,16 @@ import androidx.room.PrimaryKey
 
 @Entity (tableName = "tbPinjam")
 data class DataPinjam(
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "NIS")
-    val nisPinjam :Int,
-    @ColumnInfo(name ="Nama")
-    val namaPinjam : String,
+    val nisPinjam: Int,
+    @ColumnInfo(name = "Nama")
+    val namaPinjam: String,
     @ColumnInfo(name = "Judul")
-    val judul :String,
+    val judul: String,
     @ColumnInfo(name = "TanggalPinjam")
-    val tglPinjam :String,
+    val tglPinjam: Int,
     @ColumnInfo(name = "TanggalPengembalian")
-    val tglpengembalian :String,
-    @ColumnInfo(name = "Jumlah")
-    val jumlah :Int
+    val tglpgmbalian: Int
 
 )
