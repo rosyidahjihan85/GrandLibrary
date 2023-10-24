@@ -10,4 +10,12 @@ class Beranda : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_beranda)
     }
+    fun databuku (view: View){
+        val bookdata = Intent (this, BookData::class.java)
+        startActivity(bookdata)
+    }
+    fun datapinjam (view: View){
+        val datapinjam = Intent (this, LoanData::class.java)
+        startActivity(datapinjam)
+    }
 }
