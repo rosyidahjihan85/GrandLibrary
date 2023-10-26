@@ -17,21 +17,21 @@ class Activity_input_datapinjam : AppCompatActivity() {
         binding = ActivityInputDatapinjamBinding.inflate(layoutInflater)
         setContentView(binding.root)
         database= DBLibrary.getInstance(applicationContext)
-        binding.btnsimpndta.setOnClickListener {
-            if (binding.editnmapmnjm.text.isNotEmpty() &&
-                binding.editTextjdulbuku.text.isNotEmpty() &&
-                binding.editTexttglpinjm.text.isNotEmpty() &&
-                binding.edittglpengembalian.text.isNotEmpty()){
+        binding.SimpinputPin.setOnClickListener {
+            if (binding.nmPin.text.isNotEmpty() &&
+                binding.judulPin.text.isNotEmpty() &&
+                binding.tglPin.text.isNotEmpty() &&
+                binding.batasWkt.text.isNotEmpty()){
                 db.librarydao().insertDataPinjam(DataPinjam(
-                    0,binding.editnmapmnjm.text.toString(),
-                    binding.editTextjdulbuku.text.toString(),
-                    binding.editTexttglpinjm.text.toString().toInt(),
-                        binding.edittglpengembalian.text.toString().toInt())
+                    0,binding.nmPin.text.toString(),
+                    binding.judulPin.text.toString(),
+                    binding.tglPin.text.toString().toInt(),
+                        binding.batasWkt.text.toString().toInt())
                 )
-                binding.editnmapmnjm.setText("")
-                binding.editTextjdulbuku.setText("")
-                binding.editTexttglpinjm.setText("")
-                binding.edittglpengembalian.setText("")
+                binding.nmPin.setText("")
+                binding.judulPin.setText("")
+                binding.tglPin.setText("")
+                binding.batasWkt.setText("")
                 startActivity(
                     Intent(this, MainActivity::class.java))
             }else{
