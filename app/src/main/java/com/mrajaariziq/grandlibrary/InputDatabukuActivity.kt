@@ -1,6 +1,7 @@
 package com.mrajaariziq.grandlibrary
 
 import android.annotation.SuppressLint
+import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +11,7 @@ import com.mrajaariziq.grandlibrary.RoomDB.DataBuku
 import com.mrajaariziq.grandlibrary.databinding.ActivityBookDataBinding
 import com.mrajaariziq.grandlibrary.databinding.ActivityInputDatabukuBinding
 import java.text.SimpleDateFormat
+import java.util.*
 
 class InputDatabukuActivity : AppCompatActivity() {
     private lateinit var binding: ActivityInputDatabukuBinding
@@ -20,7 +22,7 @@ class InputDatabukuActivity : AppCompatActivity() {
 
         binding = ActivityInputDatabukuBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        database = DBLibrary.getinstance(applicationContext)
+        database = DBLibrary.getInstance(applicationContext)
         binding.savedatabuku.setOnClickListener {
             if (binding.idbukuinput.text.isNotEmpty() &&
                 binding.judulinput.text.isNotEmpty() &&
@@ -59,7 +61,7 @@ class InputDatabukuActivity : AppCompatActivity() {
     }
     private fun settglregis(){
         this.settgl()
-        binding.inputtgl.setOnClickListener{
+        binding.tglpin.setOnClickListener{
             var call = Calendar.getInstance()
             var year = call.get(Calendar.YEAR)
             var month = call.get(Calendar.MONTH)
@@ -67,7 +69,7 @@ class InputDatabukuActivity : AppCompatActivity() {
             var datePickerDialog = DatePickerDialog(
                 this,
                 DatePickerDialog.OnDateSetListener{picker, tahun, bulan, tanggal ->
-                    binding.inputtgl.setText("" + tanggal + "-" + tahun)
+                    binding.tglpin.setText("" + tanggal + "-" + tahun)
                 }, year, month, day
             )
             datePickerDialog.show()
@@ -78,6 +80,6 @@ class InputDatabukuActivity : AppCompatActivity() {
         val calendar = Calendar.getInstance()
         val simpleDateFormat = SimpleDateFormat ("d-m-yyyy")
         val datetime = simpleDateFormat.format(calendar.time)
-        binding.inputtgl.setText(datetime)
+        binding.tglpin.setText(datetime)
     }
 }
