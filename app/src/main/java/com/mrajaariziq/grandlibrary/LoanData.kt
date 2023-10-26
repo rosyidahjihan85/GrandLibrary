@@ -46,7 +46,7 @@ class LoanData : AppCompatActivity() {
         binding.ListPin.addItemDecoration(DividerItemDecoration(applicationContext, LinearLayoutManager.VERTICAL))
         binding.btnplusLoan.setOnClickListener{
             startActivity(
-                Intent(this, input_databuku::class.java)
+                Intent(this, Activity_input_datapinjam::class.java)
             )
         }
     }
