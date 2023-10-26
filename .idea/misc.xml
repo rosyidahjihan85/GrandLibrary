@@ -3,31 +3,31 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/GrandLibrary/app/src/main/res/drawable/adapterbuku.xml" value="0.181" />
+        <entry key="..\:/Erlin/app/src/main/res/layout/activity_beranda.xml" value="0.20416666666666666" />
+        <entry key="..\:/Erlin/app/src/main/res/layout/activity_book_data.xml" value="0.20416666666666666" />
+        <entry key="..\:/Erlin/app/src/main/res/layout/activity_input_databuku.xml" value="0.20416666666666666" />
+        <entry key="..\:/Erlin/app/src/main/res/layout/activity_input_datapinjam.xml" value="0.20416666666666666" />
+        <entry key="..\:/Erlin/app/src/main/res/layout/activity_loan_data.xml" value="0.20416666666666666" />
+        <entry key="..\:/Erlin/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Erlin/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Erlin/app/src/main/res/layout/adapterdatabuku.xml" value="0.20416666666666666" />
+        <entry key="..\:/Erlin/app/src/main/res/layout/detail_adapter.xml" value="0.20416666666666666" />
+        <entry key="..\:/Erlin/app/src/main/res/layout/detail_adapterpinjam.xml" value="0.20416666666666666" />
+        <entry key="..\:/Erlin/app/src/main/res/layout/pinjam_adapter.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandLibrary/app/src/main/res/drawable/bglogin.xml" value="0.138" />
         <entry key="..\:/GrandLibrary/app/src/main/res/drawable/bgplaintext.xml" value="0.138" />
         <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_beranda.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_book_data.xml" value="0.20416666666666666" />
-        <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_input_databuku.xml" value="0.25" />
-        <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_input_datapinjam.xml" value="0.25" />
         <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_loan_data.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/GrandLibrary/app/src/main/res/layout/adapterdatabuku.xml" value="0.20416666666666666" />
-        <entry key="..\:/GrandLibrary/app/src/main/res/layout/detail_adapter.xml" value="0.20416666666666666" />
-        <entry key="..\:/GrandLibrary/app/src/main/res/layout/detail_adapterpinjam.xml" value="0.20416666666666666" />
-        <entry key="..\:/GrandLibrary/app/src/main/res/layout/pinjam_adapter.xml" value="0.20416666666666666" />
         <entry key="..\:/grand Libraly/app/src/main/res/drawable/bglogin.xml" value="0.127" />
-        <entry key="..\:/grand Libraly/app/src/main/res/drawable/lli.xml" value="0.1765" />
-        <entry key="..\:/grand Libraly/app/src/main/res/drawable/wele.xml" value="0.1765" />
         <entry key="..\:/grand Libraly/app/src/main/res/font/yeseva_one.xml" value="0.23076923076923078" />
         <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_beranda.xml" value="0.20416666666666666" />
         <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_book_data.xml" value="0.20416666666666666" />
-        <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_input_databuku.xml" value="0.25" />
-        <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_input_datapinjam.xml" value="0.20416666666666666" />
         <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_loan_data.xml" value="0.20416666666666666" />
         <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
-        <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/grand Libraly/app/src/main/res/layout/adapterdatabuku.xml" value="0.20416666666666666" />
         <entry key="..\:/grand Libraly/app/src/main/res/layout/detail_adapter.xml" value="0.20416666666666666" />
         <entry key="..\:/grand Libraly/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.127" />

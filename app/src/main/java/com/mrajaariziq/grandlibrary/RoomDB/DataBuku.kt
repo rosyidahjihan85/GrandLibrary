@@ -15,7 +15,5 @@ data class DataBuku(
     val pengarangBuku :String,
     @ColumnInfo (name = "Penerbit")
     val penerbitBuku :String,
-    @ColumnInfo(name = "JumlahBk")
-    val jumlahBk : Int
 
 )
