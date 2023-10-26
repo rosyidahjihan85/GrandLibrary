@@ -14,7 +14,7 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener : Any)
     :RecyclerView.Adapter<Adapterdatapinjam.ViewHolder>() {
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
 
-        val JUDULBUKU = itemView.findViewById<TextView>(R.id.judulbukuadapter)
+        val NAMAPENGGUNA = itemView.findViewById<TextView>(R.id.namapengguna)
         val HAPUS = itemView.findViewById<ImageView>(R.id.btnhapusadapterpinjam)
         val EDIT = itemView.findViewById<ImageView>(R.id.btneditadapterpinjam)
 
@@ -29,13 +29,13 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener : Any)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.detail_adapterpinjam, parent, false
+                R.layout.pinjam_adapter, parent, false
             )
         )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.JUDULBUKU.text = list[position].judul
+        holder.NAMAPENGGUNA.text = list[position].namaPinjam
         holder.HAPUS.setOnClickListener {
             listener.ondelete(list[position])
         }
