@@ -57,29 +57,5 @@ class InputDatabukuActivity : AppCompatActivity() {
         }
 
 
-        this.settglregis()
-    }
-    private fun settglregis(){
-        this.settgl()
-        binding.tglpin.setOnClickListener{
-            var call = Calendar.getInstance()
-            var year = call.get(Calendar.YEAR)
-            var month = call.get(Calendar.MONTH)
-            var day = call.get(Calendar. DAY_OF_MONTH)
-            var datePickerDialog = DatePickerDialog(
-                this,
-                DatePickerDialog.OnDateSetListener{picker, tahun, bulan, tanggal ->
-                    binding.tglpin.setText("" + tanggal + "-" + tahun)
-                }, year, month, day
-            )
-            datePickerDialog.show()
-        }
-    }
-    @SuppressLint("SimpleDateFormat")
-    private fun settgl(){
-        val calendar = Calendar.getInstance()
-        val simpleDateFormat = SimpleDateFormat ("d-m-yyyy")
-        val datetime = simpleDateFormat.format(calendar.time)
-        binding.tglpin.setText(datetime)
     }
 }

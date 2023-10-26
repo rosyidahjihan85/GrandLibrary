@@ -49,7 +49,7 @@ class BookData : AppCompatActivity() {
         binding.listdata.addItemDecoration(DividerItemDecoration(applicationContext, LinearLayoutManager.VERTICAL))
         binding.btnplusbook.setOnClickListener{
             startActivity(
-                Intent(this, input_databuku::class.java)
+                Intent(this, InputDatabukuActivity::class.java)
             )
         }
     }
