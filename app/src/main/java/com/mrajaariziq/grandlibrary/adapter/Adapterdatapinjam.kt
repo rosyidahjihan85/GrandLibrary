@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.mrajaariziq.grandlibrary.R
+import com.mrajaariziq.grandlibrary.RoomDB.DataBuku
 import com.mrajaariziq.grandlibrary.RoomDB.DataPinjam
 
 class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener : Any)
@@ -19,6 +20,12 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener : Any)
         val BATASWAKTU = itemView.findViewById<TextView>(R.id.bataswaktupinjamadapter)
         val HAPUS = itemView.findViewById<ImageView>(R.id.btnhapusadapterpinjam)
         val EDIT = itemView.findViewById<ImageView>(R.id.btneditadapterpinjam)
+
+    }
+
+    interface Any {
+        fun ondelete(dataPinjam: DataPinjam)
+        fun onedit(dataPinjam: DataPinjam)
 
     }
 
@@ -47,5 +54,8 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener : Any)
     override fun getItemCount(): Int {
         return list.size
     }
-
+    fun setdata(newList: List<DataPinjam>){
+        list.clear()
+        list.addAll(newList)
+    }
 }
