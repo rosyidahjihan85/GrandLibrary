@@ -26,7 +26,9 @@ class BookData : AppCompatActivity() {
     private lateinit var database : DBLibrary
     private lateinit var binding: ActivityBookDataBinding
     private var dataid = 0
+    interface ATX{fun onedit(tb)}
     override fun onCreate(savedInstanceState: Bundle?) {
+        object : Adapterdatabuku.A
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book_data)
 
