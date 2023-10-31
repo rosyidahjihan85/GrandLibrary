@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager.VERTICAL
 import com.mrajaariziq.grandlibrary.RoomDB.DBLibrary
 import com.mrajaariziq.grandlibrary.RoomDB.DBLibrary.Companion.getInstance
 import com.mrajaariziq.grandlibrary.RoomDB.DataBuku
@@ -20,7 +21,7 @@ import kotlinx.coroutines.withContext
 
 class BookData : AppCompatActivity() {
 
-    private val db by lazy {DBLibrary.getInstance(this)}
+    private val db by lazy { DBLibrary.getInstance(this)}
     private lateinit var adapter : Adapterdatabuku
     private lateinit var database : DBLibrary
     private lateinit var binding: ActivityBookDataBinding
@@ -46,7 +47,7 @@ class BookData : AppCompatActivity() {
         )
         binding.listdata.adapter = adapter
         binding.listdata.layoutManager= LinearLayoutManager(applicationContext, LinearLayoutManager. VERTICAL, false)
-        binding.listdata.addItemDecoration(DividerItemDecoration(applicationContext, LinearLayoutManager.VERTICAL))
+        binding.listdata.addItemDecoration(DividerItemDecoration(applicationContext, LinearLayoutManager. VERTICAL))
         binding.btnplusbook.setOnClickListener{
             startActivity(
                 Intent(this, InputDatabukuActivity::class.java)

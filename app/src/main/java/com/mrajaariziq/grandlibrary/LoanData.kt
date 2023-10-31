@@ -25,9 +25,10 @@ class LoanData : AppCompatActivity() {
     private var dtId = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_loan_data)
 
-        setContentView(binding.root)
         binding = ActivityLoanDataBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         Adapter = Adapterdatapinjam(arrayListOf(),
             object : Adapterdatapinjam.Any{
                 override fun ondelete(dataPinjam: DataPinjam) {
@@ -46,7 +47,7 @@ class LoanData : AppCompatActivity() {
         binding.ListPin.addItemDecoration(DividerItemDecoration(applicationContext, LinearLayoutManager.VERTICAL))
         binding.btnplusLoan.setOnClickListener{
             startActivity(
-                Intent(this, Activity_input_datapinjam::class.java)
+                Intent(this, InputDatapinjamActivity::class.java)
             )
         }
     }
