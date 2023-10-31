@@ -6,40 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".InputDatapinjamActivity">
 
+
+
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="414dp"
         android:layout_height="136dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/rectangle_18" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:fontFamily="sans-serif"
-        android:text="Input Data Pinjam"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <EditText
         android:id="@+id/nmPin"
         android:layout_width="360dp"
         android:layout_height="60dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/yy"
         android:ems="10"
         android:hint="Nama peminjam"
         android:inputType="textPersonName"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,11 +40,12 @@
         android:id="@+id/judulPin"
         android:layout_width="360dp"
         android:layout_height="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/yy"
         android:ems="10"
         android:hint="Judul Buku"
         android:inputType="textPersonName"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,11 +55,12 @@
         android:id="@+id/tglPin"
         android:layout_width="360dp"
         android:layout_height="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/yy"
         android:ems="10"
         android:hint="Tanggal Pinjam"
         android:inputType="textPersonName"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,11 +70,12 @@
         android:id="@+id/batasWkt"
         android:layout_width="360dp"
         android:layout_height="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/yy"
         android:ems="10"
         android:hint="Batas Waktu"
         android:inputType="textPersonName"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,13 +83,13 @@
 
     <Button
         android:id="@+id/SimpinputPin"
-        android:layout_width="302dp"
-        android:layout_height="62dp"
+        android:layout_width="328dp"
+        android:layout_height="65dp"
         android:layout_marginBottom="100dp"
-        android:backgroundTint="#9AE0C7"
         android:text="Simpan Data"
         android:textColor="#14543D"
-        android:textSize="18sp"
+        android:textSize="18dp"
+        android:backgroundTint="#9AE0C7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -110,4 +104,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/vector" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView6"
+        app:srcCompat="@drawable/input_data_peminjam" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
