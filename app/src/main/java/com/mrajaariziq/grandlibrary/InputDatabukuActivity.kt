@@ -52,7 +52,7 @@ class InputDatabukuActivity : AppCompatActivity() {
                     applicationContext,
                     "Silahkan isi semua data terlebih dahulu",
                     Toast.LENGTH_SHORT
-                ).show()
+                ).show() //tes
             }
         }
 

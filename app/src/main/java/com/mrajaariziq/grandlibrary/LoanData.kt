@@ -71,8 +71,7 @@ class LoanData : AppCompatActivity() {
         }
     }
     private fun UpdatePinjam(dataPinjam: DataPinjam){
-        startActivity(Intent(this,UpdatePinjam::class.java)
-        putExtra("idPinjam",DataPinjam.))
+        startActivity(Intent(this,UpdatePinjam::class.java).putExtra("nisPinjam",DataPinjam.nisPinjam.toString()))
     }
 
     override fun onResume() {
