@@ -71,6 +71,9 @@ class LoanData : AppCompatActivity() {
             dialog.show()
         }
     }
+    private fun UpdatePinjam(dataPinjam: DataPinjam){
+        startActivity(Intent(this,UpdatePinjam::class.java).putExtra("nisPinjam",DataPinjam.nisPinjam.toString()))
+    }
 
     override fun onResume() {
         super.onResume()

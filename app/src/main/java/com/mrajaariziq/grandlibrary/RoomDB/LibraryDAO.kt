@@ -16,8 +16,8 @@ fun updateDataPinjam(dataPinjam: DataPinjam)
 fun deleteDataBuku(dataBuku: DataBuku)
 @Delete
 fun deleteDataPinjam(dataPinjam: DataPinjam)
-@Query("SELECT * FROM tbBuku")
+@Query("SELECT * FROM TB_BUKU")
 fun getAllBuku():List<DataBuku>
-@Query("SELECT * FROM tbPinjam")
+@Query("SELECT * FROM TB_BUKU")
 fun getAllPinjam():List<DataPinjam>
 }

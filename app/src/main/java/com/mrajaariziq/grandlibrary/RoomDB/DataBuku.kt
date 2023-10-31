@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity (tableName = "tbBuku")
+@Entity (tableName = "TB_BUKU")
 data class DataBuku(
     @PrimaryKey
     @ColumnInfo (name = "ID")
