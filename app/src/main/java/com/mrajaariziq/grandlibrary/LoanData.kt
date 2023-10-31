@@ -70,6 +70,10 @@ class LoanData : AppCompatActivity() {
             dialog.show()
         }
     }
+    private fun UpdatePinjam(dataPinjam: DataPinjam){
+        startActivity(Intent(this,UpdatePinjam::class.java)
+        putExtra("idPinjam",DataPinjam.))
+    }
 
     override fun onResume() {
         super.onResume()
