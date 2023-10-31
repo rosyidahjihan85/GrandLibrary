@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager.VERTICAL
 import com.mrajaariziq.grandlibrary.RoomDB.DBLibrary
 import com.mrajaariziq.grandlibrary.RoomDB.DBLibrary.Companion.getInstance
 import com.mrajaariziq.grandlibrary.RoomDB.DataBuku
+import com.mrajaariziq.grandlibrary.RoomDB.DataPinjam
 import com.mrajaariziq.grandlibrary.adapter.Adapterdatabuku
 import com.mrajaariziq.grandlibrary.databinding.ActivityBookDataBinding
 import com.mrajaariziq.grandlibrary.databinding.ActivityMainBinding
@@ -42,7 +43,7 @@ class BookData : AppCompatActivity() {
                 }
 
                 override fun onedit(dataBuku: DataBuku) {
-                    TODO("Not yet implemented")
+                    EditData(dataBuku)
                 }
 
             }
@@ -66,6 +67,26 @@ class BookData : AppCompatActivity() {
                 dialoginterface.dismiss()
             }
             setPositiveButton("Hapus") { dialoginterface: DialogInterface, i: Int ->
+                dialoginterface.dismiss()
+                CoroutineScope(Dispatchers.IO).launch {
+                    db.librarydao().deleteDataBuku(dataBuku)
+                    finish()
+                    startActivity(intent)
+                }
+                tampilsemuadata()
+            }
+            dialog.show()
+        }
+    }
+    private fun EditData (dataBuku: DataBuku) {
+        val dialog = AlertDialog.Builder(this)
+        dialog.apply {
+            setTitle("edit data?")
+            setMessage("Apakah anda yakin akan mengedit data ${dataBuku.judulBk}?")
+            setNegativeButton("Batal") { dialoginterface: DialogInterface, i: Int ->
+                dialoginterface.dismiss()
+            }
+            setPositiveButton("Edit") { dialoginterface: DialogInterface, i: Int ->
                 dialoginterface.dismiss()
                 CoroutineScope(Dispatchers.IO).launch {
                     db.librarydao().deleteDataBuku(dataBuku)
