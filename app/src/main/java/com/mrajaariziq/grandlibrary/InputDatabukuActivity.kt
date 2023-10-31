@@ -45,7 +45,7 @@ class InputDatabukuActivity : AppCompatActivity() {
                 binding.penerbitinput.setText("")
 
                 startActivity(
-                    Intent(this, MainActivity::class.java)
+                    Intent(this, BookData::class.java)
                 )
             } else {
                 Toast.makeText(

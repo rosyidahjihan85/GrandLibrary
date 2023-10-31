@@ -8,12 +8,14 @@ import com.mrajaariziq.grandlibrary.RoomDB.DBLibrary
 import com.mrajaariziq.grandlibrary.RoomDB.DataPinjam
 import com.mrajaariziq.grandlibrary.databinding.ActivityInputDatapinjamBinding
 
-class Activity_input_datapinjam : AppCompatActivity() {
+class InputDatapinjamActivity : AppCompatActivity() {
     private val db by lazy { DBLibrary.getInstance(this) }
     private lateinit var binding: ActivityInputDatapinjamBinding
     private lateinit var database : DBLibrary
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityInputDatapinjamBinding.inflate(layoutInflater)
         setContentView(binding.root)
         database= DBLibrary.getInstance(applicationContext)
@@ -22,18 +24,20 @@ class Activity_input_datapinjam : AppCompatActivity() {
                 binding.judulPin.text.isNotEmpty() &&
                 binding.tglPin.text.isNotEmpty() &&
                 binding.batasWkt.text.isNotEmpty()){
-                db.librarydao().insertDataPinjam(DataPinjam(
+                db.librarydao().insertDataPinjam(
+                    DataPinjam(
                     0,binding.nmPin.text.toString(),
-                    binding.judulPin.text.toString(),
-                    binding.tglPin.text.toString().toInt(),
-                        binding.batasWkt.text.toString().toInt())
+                        binding.judulPin.text.toString(),
+                        binding.tglPin.text.toString().toInt(),
+                        binding.batasWkt.text.toString().toInt()
+                    )
                 )
                 binding.nmPin.setText("")
                 binding.judulPin.setText("")
                 binding.tglPin.setText("")
                 binding.batasWkt.setText("")
                 startActivity(
-                    Intent(this, MainActivity::class.java))
+                    Intent(this, LoanData::class.java))
             }else{
                 Toast.makeText(applicationContext,
                     "silahkan isi data terlebih dahulu",

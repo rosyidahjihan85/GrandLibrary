@@ -28,8 +28,6 @@ class Adapterdatabuku(val list: ArrayList<DataBuku>, var listener:OnAdapterListe
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.judul.text = list[position].judulBk
-
-
         //step 4 membuat holder
         holder.hapus.setOnClickListener{
             listener.ondelete(list[position])
