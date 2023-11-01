@@ -7,15 +7,19 @@
     tools:context=".InputDatapinjamActivity">
 
 
+
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="414dp"
         android:layout_height="136dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/rectangle_18" />
+
+
+
 
     <EditText
         android:id="@+id/nmPin"
