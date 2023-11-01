@@ -36,7 +36,7 @@ class LoanData : AppCompatActivity() {
                 }
 
                 override fun onedit(dataPinjam: DataPinjam) {
-                   editData(dataPinjam)
+                    TODO("Not yet implemented")
                 }
 
             }
@@ -71,27 +71,8 @@ class LoanData : AppCompatActivity() {
             dialog.show()
         }
     }
-
-
-    private fun editData (dataPinjam: DataPinjam) {
-        val dialog = AlertDialog.Builder(this)
-        dialog.apply {
-            setTitle("edit data?")
-            setMessage("Apakah anda yakin akan mengedit data ${dataPinjam.judul}?")
-            setNegativeButton("Batal") { dialoginterface: DialogInterface, i: Int ->
-                dialoginterface.dismiss()
-            }
-            setPositiveButton("Edit") { dialoginterface: DialogInterface, i: Int ->
-                dialoginterface.dismiss()
-                CoroutineScope(Dispatchers.IO).launch {
-                    db.librarydao().deleteDataPinjam(dataPinjam)
-                    finish()
-                    startActivity(intent)
-                }
-                tampilsemuadata()
-            }
-            dialog.show()
-        }
+    private fun UpdatePinjam(dataPinjam: DataPinjam){
+        startActivity(Intent(this,UpdatePinjam::class.java).putExtra("nisPinjam",DataPinjam.nisPinjam.toString()))
     }
 
     override fun onResume() {
