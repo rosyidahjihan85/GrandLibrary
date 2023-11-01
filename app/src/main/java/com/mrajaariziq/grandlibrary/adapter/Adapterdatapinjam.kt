@@ -7,11 +7,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.mrajaariziq.grandlibrary.DetailPinjamActivity
 import com.mrajaariziq.grandlibrary.R
-import com.mrajaariziq.grandlibrary.RoomDB.DataBuku
 import com.mrajaariziq.grandlibrary.RoomDB.DataPinjam
 import com.mrajaariziq.grandlibrary.UpdatePinjam
-import com.mrajaariziq.grandlibrary.databinding.ActivityLoanDataBinding
 
 class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener : Any)
     :RecyclerView.Adapter<Adapterdatapinjam.ViewHolder>() {
@@ -20,6 +19,8 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener : Any)
         val NAMAPENGGUNA = itemView.findViewById<TextView>(R.id.namapengguna)
         val HAPUS = itemView.findViewById<ImageView>(R.id.btnhapusadapterpinjam)
         val EDIT = itemView.findViewById<ImageView>(R.id.btneditadapterpinjam)
+        val detail = itemView.findViewById<ImageView>(R.id.imgpinbuku)
+
 
     }
 
@@ -47,7 +48,12 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener : Any)
         }
         holder.EDIT.setOnClickListener {
             val context = holder.itemView.context
-            val intent= Intent(context, UpdatePinjam::class.java).putExtra("idpinjam",list[position].nisPinjam.toString())
+            val intent= Intent(context, UpdatePinjam::class.java).putExtra("nispinjam",list[position].nisPinjam.toString())
+            context.startActivity(intent)
+        }
+        holder.detail.setOnClickListener {
+            val context = holder.itemView.context
+            val intent= Intent(context, DetailPinjamActivity::class.java).putExtra("nispinjam", list[position].nisPinjam.toString())
             context.startActivity(intent)
         }
 

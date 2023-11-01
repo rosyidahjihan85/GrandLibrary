@@ -42,11 +42,7 @@ class InputDatapinjamActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext,
                     "silahkan isi data terlebih dahulu",
                     Toast.LENGTH_SHORT).show()
-
             }
-
         }
-
     }
-
 }

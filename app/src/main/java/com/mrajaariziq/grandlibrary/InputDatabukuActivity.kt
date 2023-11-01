@@ -55,7 +55,5 @@ class InputDatabukuActivity : AppCompatActivity() {
                 ).show() //tes
             }
         }
-
-
     }
 }
