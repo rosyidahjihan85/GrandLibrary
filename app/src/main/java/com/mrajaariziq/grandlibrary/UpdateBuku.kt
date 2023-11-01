@@ -18,7 +18,7 @@ class UpdateBuku : AppCompatActivity() {
         binding = ActivityUpdateBukuBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val id = intent.getStringExtra("ID").toString().toInt()
+        val id = intent.getStringExtra("id").toString().toInt()
         val dataBuku = db.librarydao().getid(id)
 
         binding.idbukuupdate.setText(dataBuku[0].idBuku)
@@ -45,7 +45,7 @@ class UpdateBuku : AppCompatActivity() {
                     applicationContext, "Data berhasil diubah",
                     Toast.LENGTH_SHORT
                 ).show()
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, UpdateBuku::class.java))
                 onBackPressed()
 
             } else {
