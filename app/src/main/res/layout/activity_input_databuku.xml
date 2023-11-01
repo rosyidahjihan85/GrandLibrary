@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".input_databuku">
+    tools:context=".InputDatabukuActivity">
 
     <ImageView
         android:id="@+id/imageView14"
-        android:layout_width="419dp"
-        android:layout_height="128dp"
+        android:layout_width="409dp"
+        android:layout_height="186dp"
         android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/idbukuinput"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/rectangle_14" />
@@ -39,9 +40,9 @@
         android:layout_marginTop="60dp"
         android:background="@drawable/lli"
         android:ems="10"
+        android:hint="Id Buku"
         android:inputType="textPersonName"
         android:padding="10dp"
-        android:hint="Id Buku"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,8 +85,8 @@
         android:layout_marginTop="36dp"
         android:backgroundTint="#9AE0C7"
         android:text="Simpan Data"
-        android:textSize="20dp"
         android:textColor="#14543D"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/penerbitinput" />
@@ -112,3 +113,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
