@@ -19,8 +19,8 @@ class UpdatePinjam : AppCompatActivity() {
         binding = ActivityUpdatePinjamBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val id = intent.getStringExtra("nisPinjam").toString().toInt()
-        val data =db.librarydao().getAllPinjam(id)
+        val nis = intent.getStringExtra("nisPinjam").toString().toInt()
+        val data =db.librarydao().getnis(nis)
 
         binding.UpdNmPin.setText(data[0].nisPinjam)
         binding.UpdJdlPin.setText(data[0].judul)
@@ -32,7 +32,7 @@ class UpdatePinjam : AppCompatActivity() {
                 binding.UpdTglPin.text.isNotEmpty()&&
                 binding.UpdBatasWkt.text.isNotEmpty()){
 
-            db.librarydao().updateDataPinjam(DataPinjam(id,
+            db.librarydao().updateDataPinjam(DataPinjam(nis,
             binding.UpdNmPin.text.toString(),
             binding.UpdJdlPin.text.toString(),
             binding.UpdTglPin.text.toString().toInt(),
