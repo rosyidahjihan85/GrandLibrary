@@ -17,6 +17,9 @@
             android:name=".UpdatePinjam"
             android:exported="false" />
         <activity
+            android:name=".UpdateBuku"
+            android:exported="false" />
+        <activity
             android:name=".InputDatabukuActivity"
             android:exported="false" />
         <activity
