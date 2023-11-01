@@ -21,6 +21,7 @@ class DetailPinjamActivity : AppCompatActivity() {
         fine.judulbukupinjamadapter.setText(data.judul)
         fine.tanggalpinjamadapter.setText(data.tglPinjam)
         fine.bataswaktupinjamadapter.setText(data.bataswaktu)
+        fine.imageView13.setImageResource(R.drawable.rectangle_7__1_)
 
     }
 }
