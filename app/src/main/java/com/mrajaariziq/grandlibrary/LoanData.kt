@@ -17,45 +17,46 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class LoanData : AppCompatActivity() {
-
     private val db by lazy { DBLibrary.getInstance(this) }
     private lateinit var Adapter: Adapterdatapinjam
     private lateinit var database: DBLibrary
-    private lateinit var binding:ActivityLoanDataBinding
-    private var dtId = 0
+    private lateinit var binding: ActivityLoanDataBinding
+    private var dataId = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_loan_data)
+        setContentView(R.layout.activity_book_data)
+
 
         binding = ActivityLoanDataBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         Adapter = Adapterdatapinjam(arrayListOf(),
-            object : Adapterdatapinjam.Any{
-                override fun ondelete(dataPinjam: DataPinjam) {
-                  hpsData(dataPinjam)
+            object : Adapterdatapinjam.OnAdapterLinstener {
+
+                override fun onhapus(dataPinjam: DataPinjam) {
+                    hpsData(dataPinjam)
                 }
 
                 override fun onedit(dataPinjam: DataPinjam) {
-                   UpdatePinjam(dataPinjam)
+                   EditData(dataPinjam)
                 }
 
             }
-
         )
         binding.ListPin.adapter = Adapter
-        binding.ListPin.layoutManager= LinearLayoutManager(applicationContext, LinearLayoutManager. VERTICAL, false)
-        binding.ListPin.addItemDecoration(DividerItemDecoration(applicationContext, LinearLayoutManager.VERTICAL))
-        binding.btnplusLoan.setOnClickListener{
-            val  intent =Intent(this,InputDatapinjamActivity::class.java)
-            startActivity(intent)
-            finish()
+        binding.ListPin.layoutManager =LinearLayoutManager(applicationContext, LinearLayoutManager.VERTICAL, false)
+        binding.ListPin.addItemDecoration(DividerItemDecoration(applicationContext,LinearLayoutManager. VERTICAL))
+        binding.btnplusLoan.setOnClickListener {
+            startActivity(Intent(this, InputDatapinjamActivity::class.java))
+
         }
     }
-    private fun hpsData (dataPinjam: DataPinjam) {
+
+    private fun hpsData(dataPinjam: DataPinjam) {
         val dialog = AlertDialog.Builder(this)
         dialog.apply {
             setTitle("Konfirmasi hapus data")
-            setMessage("Apakah anda yakin akan menghapus data ${dataPinjam.judul}?")
+            setMessage("Apakah anda yakin akan menghapus data ${dataPinjam.namaPinjam}?")
             setNegativeButton("Batal") { dialoginterface: DialogInterface, i: Int ->
                 dialoginterface.dismiss()
             }
@@ -66,47 +67,49 @@ class LoanData : AppCompatActivity() {
                     finish()
                     startActivity(intent)
                 }
-                tampilsemuadata()
+                tampilsemuaData()
             }
             dialog.show()
         }
     }
-    private fun UpdatePinjam(dataPinjam: DataPinjam){
+
+    private fun EditData(dataPinjam: DataPinjam) {
         val dialog = AlertDialog.Builder(this)
         dialog.apply {
-            setTitle("EDIT DATA?")
-            setMessage("Apakah anda yakin akan mengedit data ${dataPinjam.namaPinjam}?")
-            setNegativeButton("Batal") {dialoginterface: DialogInterface,i:Int ->
+            setTitle("edit data?")
+            setMessage("apakah anda yakin akan mengedit data${dataPinjam.namaPinjam}?")
+            setNegativeButton("batal") { dialoginterface: DialogInterface, i: Int ->
                 dialoginterface.dismiss()
             }
-            setPositiveButton("Edit") { dialoginterface: DialogInterface, i: Int ->
-                dialoginterface.dismiss()
+            setPositiveButton("edit") { dialoginterface: DialogInterface, i: Int ->
                 CoroutineScope(Dispatchers.IO).launch {
                     db.librarydao().deleteDataPinjam(dataPinjam)
                     finish()
                     startActivity(intent)
                 }
-                tampilsemuadata()
+                tampilsemuaData()
             }
             dialog.show()
         }
+    }
 
-        }
     override fun onResume() {
         super.onResume()
-        tampilsemuadata()
-
+        tampilsemuaData()
     }
-    fun tampilsemuadata(){
+
+    fun tampilsemuaData() {
         binding.ListPin.layoutManager = LinearLayoutManager(this)
         CoroutineScope(Dispatchers.IO).launch {
-            val Data = db.librarydao().getAllPinjam()
-            Adapter.setdata(Data)
+            val data = db.librarydao().getAllPinjam()
+            Adapter.setdata(data)
             withContext(Dispatchers.Main){
                 Adapter.notifyDataSetChanged()
+
             }
         }
-        binding.ListPin.adapter= Adapter
+        binding.ListPin.adapter = Adapter
     }
-
 }
+
+
