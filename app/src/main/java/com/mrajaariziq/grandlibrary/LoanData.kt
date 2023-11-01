@@ -36,7 +36,7 @@ class LoanData : AppCompatActivity() {
                 }
 
                 override fun onedit(dataPinjam: DataPinjam) {
-                    TODO("Not yet implemented")
+                   UpdatePinjam(dataPinjam)
                 }
 
             }
@@ -46,9 +46,9 @@ class LoanData : AppCompatActivity() {
         binding.ListPin.layoutManager= LinearLayoutManager(applicationContext, LinearLayoutManager. VERTICAL, false)
         binding.ListPin.addItemDecoration(DividerItemDecoration(applicationContext, LinearLayoutManager.VERTICAL))
         binding.btnplusLoan.setOnClickListener{
-            startActivity(
-                Intent(this, InputDatapinjamActivity::class.java)
-            )
+            val  intent =Intent(this,InputDatapinjamActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
     private fun hpsData (dataPinjam: DataPinjam) {
@@ -72,9 +72,26 @@ class LoanData : AppCompatActivity() {
         }
     }
     private fun UpdatePinjam(dataPinjam: DataPinjam){
-        startActivity(Intent(this,UpdatePinjam::class.java).putExtra("nisPinjam",DataPinjam.nisPinjam.toString()))
-    }
+        val dialog = AlertDialog.Builder(this)
+        dialog.apply {
+            setTitle("EDIT DATA?")
+            setMessage("Apakah anda yakin akan mengedit data ${dataPinjam.namaPinjam}?")
+            setNegativeButton("Batal") {dialoginterface: DialogInterface,i:Int ->
+                dialoginterface.dismiss()
+            }
+            setPositiveButton("Edit") { dialoginterface: DialogInterface, i: Int ->
+                dialoginterface.dismiss()
+                CoroutineScope(Dispatchers.IO).launch {
+                    db.librarydao().deleteDataPinjam(dataPinjam)
+                    finish()
+                    startActivity(intent)
+                }
+                tampilsemuadata()
+            }
+            dialog.show()
+        }
 
+        }
     override fun onResume() {
         super.onResume()
         tampilsemuadata()
