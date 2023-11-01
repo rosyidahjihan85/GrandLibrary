@@ -20,7 +20,7 @@ class UpdatePinjam : AppCompatActivity() {
         setContentView(binding.root)
 
         val id = intent.getStringExtra("nisPinjam").toString().toInt()
-        val data =db.librarydao().getAllPinjam(id)
+        val data =db.librarydao().getAllPinjam()
 
         binding.UpdNmPin.setText(data[0].nisPinjam)
         binding.UpdJdlPin.setText(data[0].judul)
