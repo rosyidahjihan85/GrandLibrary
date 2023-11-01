@@ -12,7 +12,7 @@ class DetailBukuActivity : AppCompatActivity() {
 
 override fun onCreate(savedInstanceState: Bundle?) {
     finding = ActivityDetailBukuBinding.inflate(layoutInflater)
-        super.onCreate(savedInstanceState)
+    super.onCreate(savedInstanceState)
         setContentView(finding.root)
 
     finding.imgbook.setOnClickListener{onBackPressed()}
@@ -22,7 +22,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
     val data = db.librarydao().getid(id)[0]
     finding.judulbukuadapter.setText(data.judulBk)
     finding.pengarangadapter.setText(data.pengarangBuku)
-    finding.pnrbitadapter.setText(data.penerbitBuku)
+    finding.penerbit.setText(data.penerbitBuku)
     finding.imgbook.setImageResource(R.drawable.logobukuuuuu_1)
     }
 }
