@@ -8,6 +8,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mrajaariziq.grandlibrary.RoomDB.DBLibrary
+import com.mrajaariziq.grandlibrary.RoomDB.DataBuku
 import com.mrajaariziq.grandlibrary.RoomDB.DataPinjam
 import com.mrajaariziq.grandlibrary.adapter.Adapterdatapinjam
 import com.mrajaariziq.grandlibrary.databinding.ActivityLoanDataBinding
@@ -36,12 +37,13 @@ class LoanData : AppCompatActivity() {
                 }
 
                 override fun onedit(dataPinjam: DataPinjam) {
-                    TODO("Not yet implemented")
+
                 }
 
             }
 
         )
+
         binding.ListPin.adapter = Adapter
         binding.ListPin.layoutManager= LinearLayoutManager(applicationContext, LinearLayoutManager. VERTICAL, false)
         binding.ListPin.addItemDecoration(DividerItemDecoration(applicationContext, LinearLayoutManager.VERTICAL))
@@ -71,9 +73,7 @@ class LoanData : AppCompatActivity() {
             dialog.show()
         }
     }
-    private fun UpdatePinjam(dataPinjam: DataPinjam){
-        startActivity(Intent(this,UpdatePinjam::class.java).putExtra("nisPinjam",DataPinjam.nisPinjam.toString()))
-    }
+
 
     override fun onResume() {
         super.onResume()
