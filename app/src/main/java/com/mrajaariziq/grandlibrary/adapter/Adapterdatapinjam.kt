@@ -12,7 +12,7 @@ import com.mrajaariziq.grandlibrary.R
 import com.mrajaariziq.grandlibrary.RoomDB.DataPinjam
 import com.mrajaariziq.grandlibrary.UpdatePinjam
 
-class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener : Any)
+class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener :OnAdapterLinstener)
     :RecyclerView.Adapter<Adapterdatapinjam.ViewHolder>() {
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
 
@@ -24,11 +24,7 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener : Any)
 
     }
 
-    interface Any {
-        fun ondelete(dataPinjam: DataPinjam)
-        fun onedit(dataPinjam: DataPinjam)
 
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
@@ -44,7 +40,7 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener : Any)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.NAMAPENGGUNA.text = list[position].namaPinjam
         holder.HAPUS.setOnClickListener {
-            listener.ondelete(list[position])
+            listener.onhapus(list[position])
         }
         holder.EDIT.setOnClickListener {
             val context = holder.itemView.context
@@ -66,6 +62,10 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener : Any)
         list.clear()
         list.addAll(newList)
     }
+    interface OnAdapterLinstener {
+        fun onhapus(dataPinjam: DataPinjam)
+        fun onedit(dataPinjam: DataPinjam)
 
+    }
 
 }

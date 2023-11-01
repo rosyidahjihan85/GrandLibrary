@@ -9,7 +9,6 @@ import com.mrajaariziq.grandlibrary.RoomDB.DataPinjam
 import com.mrajaariziq.grandlibrary.databinding.ActivityInputDatapinjamBinding
 
 class InputDatapinjamActivity : AppCompatActivity() {
-    private val db by lazy { DBLibrary.getInstance(this) }
     private lateinit var binding: ActivityInputDatapinjamBinding
     private lateinit var database : DBLibrary
 
@@ -23,8 +22,10 @@ class InputDatapinjamActivity : AppCompatActivity() {
             if (binding.nmPin.text.isNotEmpty() &&
                 binding.judulPin.text.isNotEmpty() &&
                 binding.tglPin.text.isNotEmpty() &&
-                binding.batasWkt.text.isNotEmpty()){
-                db.librarydao().insertDataPinjam(
+                binding.batasWkt.text.isNotEmpty()
+            ){
+
+                database.librarydao().insertDataPinjam(
                     DataPinjam(
                     0,binding.nmPin.text.toString(),
                         binding.judulPin.text.toString(),
