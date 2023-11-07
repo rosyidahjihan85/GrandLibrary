@@ -87,7 +87,7 @@ class BookData : AppCompatActivity() {
             setPositiveButton("Edit") { dialoginterface: DialogInterface, i: Int ->
                 dialoginterface.dismiss()
                 CoroutineScope(Dispatchers.IO).launch {
-                    db.librarydao().deleteDataBuku(dataBuku)
+                    db.librarydao().updateDataBuku(dataBuku)
                     finish()
                     startActivity(intent)
                 }

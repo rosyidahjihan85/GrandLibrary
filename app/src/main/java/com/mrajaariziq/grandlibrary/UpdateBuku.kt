@@ -45,7 +45,7 @@ class UpdateBuku : AppCompatActivity() {
                     applicationContext, "Data berhasil diubah",
                     Toast.LENGTH_SHORT
                 ).show()
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, UpdateBuku::class.java))
                 onBackPressed()
 
             } else {
