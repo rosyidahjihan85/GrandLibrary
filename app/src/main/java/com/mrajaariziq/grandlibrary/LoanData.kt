@@ -30,13 +30,15 @@ class LoanData : AppCompatActivity() {
         binding = ActivityLoanDataBinding.inflate(layoutInflater)
         setContentView(binding.root)
         Adapter = Adapterdatapinjam(arrayListOf(),
-            object : Adapterdatapinjam.Any{
-                override fun ondelete(dataPinjam: DataPinjam) {
-                  hpsData(dataPinjam)
+            object : Adapterdatapinjam.OnAdapterLinstener{
+
+                override fun onhapus(dataPinjam: DataPinjam) {
+                    hpsData(dataPinjam)
+
                 }
 
                 override fun onedit(dataPinjam: DataPinjam) {
-                   UpdatePinjam(dataPinjam)
+                    UpdatePinjam(dataPinjam)
                 }
 
             }
