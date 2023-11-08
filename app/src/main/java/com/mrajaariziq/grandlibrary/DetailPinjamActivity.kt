@@ -15,7 +15,7 @@ class DetailPinjamActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(fine.root)
 
-        var nis = intent.getStringExtra("nisbuku").toString().toInt()
+        val nis = intent.getStringExtra("nisbuku").toString().toInt()
         val data = db.librarydao().getnis(nis)[0]
         fine.namapinjamadapter.setText(data.namaPinjam)
         fine.judulbukupinjamadapter.setText(data.judul)

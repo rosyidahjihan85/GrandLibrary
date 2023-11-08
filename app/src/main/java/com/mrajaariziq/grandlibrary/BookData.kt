@@ -49,9 +49,8 @@ class BookData : AppCompatActivity() {
             }
         )
 
-        binding.homebook.setOnClickListener{
-            Intent(this,Beranda::class.java)
-            startActivity(Intent())
+        binding.homebook.setOnClickListener {
+            startActivity( Intent(this,Beranda::class.java))
         }
 
         binding.listdata.adapter = adapter

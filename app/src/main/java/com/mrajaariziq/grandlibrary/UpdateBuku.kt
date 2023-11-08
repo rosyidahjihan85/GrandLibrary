@@ -21,7 +21,6 @@ class UpdateBuku : AppCompatActivity() {
         val id = intent.getStringExtra("ID").toString().toInt()
         val dataBuku = db.librarydao().getid(id)
 
-        binding.idbukuupdate.setText(dataBuku[0].idBuku)
         binding.judulupdate.setText(dataBuku[0].judulBk)
         binding.pengarangupdate.setText(dataBuku[0].pengarangBuku)
         binding.penerbitupdate.setText(dataBuku[0].penerbitBuku)
