@@ -17,12 +17,12 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
     finding.imgbook.setOnClickListener{onBackPressed()}
 
-    var id = intent.getStringExtra("idbuku").toString().toInt()
+    val id = intent.getStringExtra("idbuku").toString().toInt()
 
     val data = db.librarydao().getid(id)[0]
     finding.judulbukuadapter.setText(data.judulBk)
     finding.pengarangadapter.setText(data.pengarangBuku)
     finding.penerbit.setText(data.penerbitBuku)
-    finding.imgbook.setImageResource(R.drawable.logobukuuuuu_1)
+
     }
 }

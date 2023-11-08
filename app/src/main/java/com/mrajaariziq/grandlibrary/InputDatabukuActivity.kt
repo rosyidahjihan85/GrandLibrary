@@ -24,7 +24,7 @@ class InputDatabukuActivity : AppCompatActivity() {
         setContentView(binding.root)
         database = DBLibrary.getInstance(applicationContext)
         binding.savedatabuku.setOnClickListener {
-            if (binding.idbukuinput.text.isNotEmpty() &&
+            if (binding.idbukuinput.text.isNotEmpty()&&
                 binding.judulinput.text.isNotEmpty() &&
                 binding.pengaranginput.text.isNotEmpty() &&
                 binding.penerbitinput.text.isNotEmpty()
@@ -57,3 +57,5 @@ class InputDatabukuActivity : AppCompatActivity() {
         }
     }
 }
+
+

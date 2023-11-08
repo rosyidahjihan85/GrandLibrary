@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity (tableName = "TB_PINJAM")
 data class DataPinjam(
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
     @ColumnInfo(name = "NIS")
     val nisPinjam: Int,
     @ColumnInfo(name = "Nama")
