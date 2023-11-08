@@ -23,6 +23,15 @@
             android:name=".InputDatabukuActivity"
             android:exported="false" />
         <activity
+            android:name=".DetailPinjamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailBukuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InputDatapinjamActivity"
+            android:exported="false" />
+        <activity
             android:name=".Login"
             android:exported="false" />
         <activity
