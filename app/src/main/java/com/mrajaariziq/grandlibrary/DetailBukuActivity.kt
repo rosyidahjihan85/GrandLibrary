@@ -23,6 +23,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
     finding.judulbukuadapter.setText(data.judulBk)
     finding.pengarangadapter.setText(data.pengarangBuku)
     finding.penerbit.setText(data.penerbitBuku)
+    finding.imgbook.setImageResource(R.drawable.logobukuuuuu_1)
 
     }
 }
