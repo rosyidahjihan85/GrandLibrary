@@ -19,7 +19,7 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener :OnAdapter
         val NAMAPENGGUNA = itemView.findViewById<TextView>(R.id.namapengguna)
         val HAPUS = itemView.findViewById<ImageView>(R.id.btnhapusadapterpinjam)
         val EDIT = itemView.findViewById<ImageView>(R.id.btneditadapterpinjam)
-        val detail = itemView.findViewById<ImageView>(R.id.imgpinbuku)
+        val detail = itemView.findViewById<ImageView>(R.id.imgbook2)
 
 
     }

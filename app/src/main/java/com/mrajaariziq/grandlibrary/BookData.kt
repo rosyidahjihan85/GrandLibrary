@@ -55,7 +55,6 @@ class BookData : AppCompatActivity() {
             )
         }
     }
-
     private fun hapusdata (dataBuku: DataBuku) {
         val dialog = AlertDialog.Builder(this)
         dialog.apply {
