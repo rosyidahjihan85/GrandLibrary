@@ -48,9 +48,9 @@ class LoanData : AppCompatActivity() {
         binding.ListPin.layoutManager= LinearLayoutManager(applicationContext, LinearLayoutManager. VERTICAL, false)
         binding.ListPin.addItemDecoration(DividerItemDecoration(applicationContext, LinearLayoutManager.VERTICAL))
         binding.btnplusLoan.setOnClickListener{
-            val  intent =Intent(this,InputDatapinjamActivity::class.java)
-            startActivity(intent)
-            finish()
+            startActivity(
+                Intent(this, InputDatapinjamActivity::class.java)
+            )
         }
     }
     private fun hpsData (dataPinjam: DataPinjam) {
