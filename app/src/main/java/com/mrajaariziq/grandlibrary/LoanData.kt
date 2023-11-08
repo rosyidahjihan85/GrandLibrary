@@ -44,6 +44,9 @@ class LoanData : AppCompatActivity() {
             }
 
         )
+        binding.homeLoan.setOnClickListener {
+            startActivity( Intent(this,Beranda::class.java))
+        }
         binding.ListPin.adapter = Adapter
         binding.ListPin.layoutManager= LinearLayoutManager(applicationContext, LinearLayoutManager. VERTICAL, false)
         binding.ListPin.addItemDecoration(DividerItemDecoration(applicationContext, LinearLayoutManager.VERTICAL))

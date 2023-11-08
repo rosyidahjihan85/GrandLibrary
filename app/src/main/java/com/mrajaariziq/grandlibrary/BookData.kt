@@ -44,8 +44,16 @@ class BookData : AppCompatActivity() {
                     EditData(dataBuku)
                 }
 
+
+
             }
         )
+
+        binding.homebook.setOnClickListener{
+            Intent(this,Beranda::class.java)
+            startActivity(Intent())
+        }
+
         binding.listdata.adapter = adapter
         binding.listdata.layoutManager= LinearLayoutManager(applicationContext, LinearLayoutManager. VERTICAL, false)
         binding.listdata.addItemDecoration(DividerItemDecoration(applicationContext, LinearLayoutManager. VERTICAL))
