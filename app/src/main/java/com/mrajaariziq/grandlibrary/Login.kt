@@ -1,6 +1,6 @@
 package com.mrajaariziq.grandlibrary
 
-import     android.content.Intent
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -8,19 +8,19 @@ import com.mrajaariziq.grandlibrary.databinding.ActivityLoginBinding
 
 class Login : AppCompatActivity() {
 
-    private lateinit var binding: ActivityLoginBinding
+    private lateinit var find: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        binding= ActivityLoginBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        find= ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(find.root)
 
-        val innama = binding.loginnama
-        val inpassword = binding.loginpassword
+        val innama = find.loginnama
+        val inpassword = find.loginpassword
         val password = "12345"
         val user = listOf<String>("admin","peminjam")
-        binding.btnlogin.setOnClickListener{
+        find.btnlogin.setOnClickListener{
 
             if (innama.text.isNotEmpty()&& inpassword.text.isNotEmpty())
 
@@ -37,8 +37,7 @@ class Login : AppCompatActivity() {
                 }
         }
     }
-
-}
-private fun alert(msg:String){
-    Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
+    private fun alert(msg:String){
+        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
+    }
 }
