@@ -11,29 +11,29 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="160dp"
-        android:layout_height="40dp"
+        android:layout_width="101dp"
+        android:layout_height="49dp"
         android:layout_marginStart="4dp"
         android:layout_marginBottom="104dp"
-        android:fontFamily="@font/alike_angular"
+        android:fontFamily="@font/just_another_hand"
         android:text="Welcome"
         android:textColor="#14543D"
-        android:textSize="37dp"
+        android:textSize="50dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/well"
-        android:layout_width="160dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="164dp"
+        android:id="@+id/welcomie"
+        android:layout_width="212dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
         android:layout_marginBottom="104dp"
-        android:fontFamily="@font/alike_angular"
+        android:fontFamily="@font/just_another_hand"
         android:text="User"
         android:textColor="#14543D"
-        android:textSize="37dp"
+        android:textSize="50dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/textView" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -90,8 +90,6 @@
         app:layout_constraintEnd_toStartOf="@+id/imgbtpeminjam"
         app:layout_constraintHorizontal_bias="0.645"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/pngtree_cartoon_open_book_png_image_6451310_removebg_preview_1"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
@@ -99,15 +97,13 @@
         android:id="@+id/imgbtpeminjam"
         android:layout_width="115dp"
         android:layout_height="163dp"
-        android:layout_marginEnd="72dp"
+        android:layout_marginEnd="68dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/ray"
         android:onClick="datapinjam"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/txt.datapinjam"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/peminjaaam_1"
         tools:ignore="SpeakableTextPresentCheck" />
 

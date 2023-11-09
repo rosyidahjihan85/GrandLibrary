@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.mrajaariziq.grandlibrary.RoomDB.DBLibrary
 import com.mrajaariziq.grandlibrary.RoomDB.DataBuku
+import com.mrajaariziq.grandlibrary.adapter.Adapterdatabuku
 import com.mrajaariziq.grandlibrary.databinding.ActivityInputDatabukuBinding
 import com.mrajaariziq.grandlibrary.databinding.ActivityUpdateBukuBinding
 
@@ -44,7 +45,7 @@ class UpdateBuku : AppCompatActivity() {
                     applicationContext, "Data berhasil diubah",
                     Toast.LENGTH_SHORT
                 ).show()
-                startActivity(Intent(this, UpdateBuku::class.java))
+                startActivity(Intent(this, BookData::class.java))
                 onBackPressed()
 
             } else {
