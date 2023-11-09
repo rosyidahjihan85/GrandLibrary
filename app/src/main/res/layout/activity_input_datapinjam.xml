@@ -19,29 +19,16 @@
         app:srcCompat="@drawable/rectangle_18" />
 
 
+
+
     <EditText
         android:id="@+id/nmPin"
         android:layout_width="360dp"
         android:layout_height="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/yy"
         android:ems="10"
         android:hint="Nama peminjam"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nisPin" />
-
-    <EditText
-        android:id="@+id/nisPin"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/yy"
-        android:ems="10"
-        android:hint="NIS"
         android:inputType="textPersonName"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,11 +85,11 @@
         android:id="@+id/SimpinputPin"
         android:layout_width="328dp"
         android:layout_height="65dp"
-        android:layout_marginBottom="48dp"
-        android:backgroundTint="#9AE0C7"
+        android:layout_marginBottom="100dp"
         android:text="Simpan Data"
         android:textColor="#14543D"
         android:textSize="18dp"
+        android:backgroundTint="#9AE0C7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
