@@ -40,6 +40,7 @@ class Adapterdatabuku(val list: ArrayList<DataBuku>, var listener:OnAdapterListe
         holder.edit.setOnClickListener{
            listener.onedit(list[position])
 
+
         }
         holder.detail.setOnClickListener{
             val context = holder.itemView.context

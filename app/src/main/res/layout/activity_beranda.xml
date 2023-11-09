@@ -75,7 +75,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintHorizontal_bias="0.396"
         app:layout_constraintStart_toEndOf="@+id/txt.databuku"
         tools:ignore="TouchTargetSizeCheck" />
 
@@ -88,7 +88,7 @@
         android:onClick="databuku"
         app:layout_constraintBottom_toTopOf="@+id/txt.databuku"
         app:layout_constraintEnd_toStartOf="@+id/imgbtpeminjam"
-        app:layout_constraintHorizontal_bias="0.645"
+        app:layout_constraintHorizontal_bias="0.738"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/pngtree_cartoon_open_book_png_image_6451310_removebg_preview_1"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
@@ -97,8 +97,8 @@
         android:id="@+id/imgbtpeminjam"
         android:layout_width="115dp"
         android:layout_height="163dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="4dp"
         android:background="@drawable/ray"
         android:onClick="datapinjam"
         android:scaleType="fitCenter"

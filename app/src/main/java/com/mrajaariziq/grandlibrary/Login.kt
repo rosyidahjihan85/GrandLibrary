@@ -35,11 +35,10 @@ class Login : AppCompatActivity() {
                 }else{
                     alert("password minimal 5 huruf")
                 }
-
         }
     }
-    private fun alert(msg:String){
-        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
-    }
 
+}
+private fun alert(msg:String){
+    Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
 }
