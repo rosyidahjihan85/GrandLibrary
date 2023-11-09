@@ -5,7 +5,7 @@ import android.os.Bundle
 import com.mrajaariziq.grandlibrary.RoomDB.DBLibrary
 import com.mrajaariziq.grandlibrary.databinding.ActivityDetailBukuBinding
 
-class DetailBukuActivity : AppCompatActivity() {
+class  DetailBukuActivity : AppCompatActivity() {
     private val db by lazy { DBLibrary.getInstance(this) }
     private lateinit var finding : ActivityDetailBukuBinding
 
