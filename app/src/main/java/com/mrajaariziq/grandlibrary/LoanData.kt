@@ -77,24 +77,7 @@ class LoanData : AppCompatActivity() {
         }
     }
     private fun UpdatePinjam(dataPinjam: DataPinjam){
-        val dialog = AlertDialog.Builder(this)
-        dialog.apply {
-            setTitle("EDIT DATA?")
-            setMessage("Apakah anda yakin akan mengedit data ${dataPinjam.namaPinjam}?")
-            setNegativeButton("Batal") {dialoginterface: DialogInterface,i:Int ->
-                dialoginterface.dismiss()
-            }
-            setPositiveButton("Edit") { dialoginterface: DialogInterface, i: Int ->
-                dialoginterface.dismiss()
-                CoroutineScope(Dispatchers.IO).launch {
-                    db.librarydao().deleteDataPinjam(dataPinjam)
-                    finish()
-                    startActivity(intent)
-                }
-                tampilsemuadata()
-            }
-            dialog.show()
-        }
+        startActivity(Intent(this,UpdatePinjam::class.java).putExtra("nispinjam", dataPinjam.nisPinjam.toString()))
 
         }
     override fun onResume() {

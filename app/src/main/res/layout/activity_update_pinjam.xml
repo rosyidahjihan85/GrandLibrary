@@ -33,19 +33,34 @@
 
 
     <EditText
-        android:id="@+id/UpdNmPin"
+        android:id="@+id/updNisPin"
         android:layout_width="360dp"
         android:layout_height="60dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/yy"
         android:ems="10"
-        android:padding="10dp"
-        android:hint="Nama peminjam"
+        android:hint="NIS"
         android:inputType="textPersonName"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgbook11" />
+
+    <EditText
+        android:id="@+id/updNmPin"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/yy"
+        android:ems="10"
+        android:hint="Nama peminjam"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updNisPin" />
 
     <EditText
         android:id="@+id/UpdJdlPin"
@@ -54,13 +69,13 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/yy"
         android:ems="10"
-        android:padding="10dp"
         android:hint="Judul Buku"
         android:inputType="textPersonName"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UpdNmPin" />
+        app:layout_constraintTop_toBottomOf="@+id/updNmPin" />
 
     <EditText
         android:id="@+id/UpdTglPin"
