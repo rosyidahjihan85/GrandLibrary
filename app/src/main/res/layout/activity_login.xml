@@ -14,7 +14,7 @@
         android:background="@drawable/bgplaintext"
         android:elevation="10dp"
         android:ems="10"
-        android:hint="Nama"
+        android:hint="User"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColorHint="#043A27"

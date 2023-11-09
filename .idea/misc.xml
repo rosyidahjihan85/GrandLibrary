@@ -40,11 +40,18 @@
         <entry key="..\:/grand Libraly/app/src/main/res/font/yeseva_one.xml" value="0.23076923076923078" />
         <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_beranda.xml" value="0.20416666666666666" />
         <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_book_data.xml" value="0.20416666666666666" />
+        <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_detail_buku.xml" value="0.20416666666666666" />
+        <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_detail_pinjam.xml" value="0.20416666666666666" />
+        <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_input_databuku.xml" value="0.20102564102564102" />
+        <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_input_datapinjam.xml" value="0.20102564102564102" />
         <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_loan_data.xml" value="0.20416666666666666" />
         <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_update_buku.xml" value="0.20102564102564102" />
+        <entry key="..\:/grand Libraly/app/src/main/res/layout/activity_update_pinjam.xml" value="0.20102564102564102" />
         <entry key="..\:/grand Libraly/app/src/main/res/layout/adapterdatabuku.xml" value="0.20416666666666666" />
         <entry key="..\:/grand Libraly/app/src/main/res/layout/detail_adapter.xml" value="0.20416666666666666" />
+        <entry key="..\:/grand Libraly/app/src/main/res/layout/pinjam_adapter.xml" value="0.20102564102564102" />
         <entry key="..\:/grand Libraly/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.127" />
         <entry key="..\:/grand Libraly/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.127" />
       </map>
