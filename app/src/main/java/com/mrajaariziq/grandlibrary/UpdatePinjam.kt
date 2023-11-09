@@ -19,28 +19,31 @@ class UpdatePinjam : AppCompatActivity() {
         binding = ActivityUpdatePinjamBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val nis = intent.getStringExtra("nisPinjam").toString().toInt()
+        val nis = intent.getStringExtra("nispinjam").toString().toInt()
         val data =db.librarydao().getnis(nis)
 
-        binding.UpdNmPin.setText(data[0].nisPinjam)
+
+        binding.updNmPin.setText(data[0].namaPinjam)
         binding.UpdJdlPin.setText(data[0].judul)
         binding.UpdTglPin.setText(data[0].tglPinjam.toString())
         binding.UpdBatasWkt.setText(data[0].bataswaktu.toString())
         binding.btnUpPin.setOnClickListener {
-        if (binding.UpdNmPin.text.isNotEmpty()&&
+        if (binding.updNisPin.text.isNotEmpty()&&
+            binding.updNmPin.text.isNotEmpty()&&
                 binding.UpdJdlPin.text.isNotEmpty()&&
                 binding.UpdTglPin.text.isNotEmpty()&&
                 binding.UpdBatasWkt.text.isNotEmpty()){
 
-            db.librarydao().updateDataPinjam(DataPinjam(nis,
-            binding.UpdNmPin.text.toString(),
+            db.librarydao().updateDataPinjam(DataPinjam(
+                nis,
+            binding.updNmPin.text.toString(),
             binding.UpdJdlPin.text.toString(),
             binding.UpdTglPin.text.toString().toInt(),
             binding.UpdBatasWkt.text.toString().toInt()))
 
             Toast.makeText(applicationContext,"Data berhasil di ubah",
             Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this,MainActivity::class.java)
+            startActivity(Intent(this,LoanData::class.java)
             )
             onBackPressed()
         }else{

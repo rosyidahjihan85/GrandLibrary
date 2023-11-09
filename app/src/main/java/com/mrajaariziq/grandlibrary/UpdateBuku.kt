@@ -19,7 +19,7 @@ class UpdateBuku : AppCompatActivity() {
         binding = ActivityUpdateBukuBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val id = intent.getStringExtra("ID").toString().toInt()
+        val id = intent.getStringExtra("idbuku").toString().toInt()
         val dataBuku = db.librarydao().getid(id)
 
         binding.judulupdate.setText(dataBuku[0].judulBk)

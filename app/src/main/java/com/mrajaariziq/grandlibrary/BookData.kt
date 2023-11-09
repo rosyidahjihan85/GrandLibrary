@@ -83,24 +83,7 @@ class BookData : AppCompatActivity() {
         }
     }
     private fun EditData (dataBuku: DataBuku) {
-        val dialog = AlertDialog.Builder(this)
-        dialog.apply {
-            setTitle("edit data?")
-            setMessage("Apakah anda yakin akan mengedit data ${dataBuku.judulBk}?")
-            setNegativeButton("Batal") { dialoginterface: DialogInterface, i: Int ->
-                dialoginterface.dismiss()
-            }
-            setPositiveButton("Edit") { dialoginterface: DialogInterface, i: Int ->
-                dialoginterface.dismiss()
-                CoroutineScope(Dispatchers.IO).launch {
-                    db.librarydao().updateDataBuku(dataBuku)
-                    finish()
-                    startActivity(intent)
-                }
-                tampilsemuadata()
-            }
-            dialog.show()
-        }
+        startActivity(Intent(this,UpdateBuku::class.java).putExtra("idbuku", dataBuku.idBuku.toString()))
     }
 
     override fun onResume() {

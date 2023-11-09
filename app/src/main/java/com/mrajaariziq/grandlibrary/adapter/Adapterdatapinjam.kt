@@ -43,9 +43,7 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener :OnAdapter
             listener.onhapus(list[position])
         }
         holder.EDIT.setOnClickListener {
-            val context = holder.itemView.context
-            val intent= Intent(context, UpdatePinjam::class.java).putExtra("nispinjam",list[position].nisPinjam.toString())
-            context.startActivity(intent)
+            listener.onedit(list[position])
         }
         holder.detail.setOnClickListener {
             val context = holder.itemView.context
@@ -67,5 +65,6 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener :OnAdapter
         fun onedit(dataPinjam: DataPinjam)
 
     }
+
 
 }

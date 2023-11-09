@@ -15,13 +15,13 @@ class DetailPinjamActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(fine.root)
 
-        val nis = intent.getStringExtra("nisPinjam").toString().toInt()
+        val nis = intent.getStringExtra("nispinjam").toString().toInt()
         val data = db.librarydao().getnis(nis)[0]
-        fine.namapinjamadapter.setText(data.namaPinjam)
+        fine.namapinjamadapter.setText (data.namaPinjam)
         fine.judulbukupinjamadapter.setText(data.judul)
         fine.tanggalpinjamadapter.setText(data.tglPinjam)
         fine.bataswaktupinjamadapter.setText(data.bataswaktu)
-        fine.imageView13.setImageResource(R.drawable.rectangle_7__1_)
+        fine.imageView13.setImageResource(R.drawable.peminjaaam_1)
 
     }
 }
