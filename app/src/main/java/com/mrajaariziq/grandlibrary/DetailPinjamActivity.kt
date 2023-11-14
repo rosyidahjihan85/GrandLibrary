@@ -19,8 +19,8 @@ class DetailPinjamActivity : AppCompatActivity() {
         val data = db.librarydao().getnis(nis)[0]
         fine.namapinjamadapter.setText (data.namaPinjam)
         fine.judulbukupinjamadapter.setText(data.judul)
-        fine.tanggalpinjamadapter.setText(data.tglPinjam)
-        fine.bataswaktupinjamadapter.setText(data.bataswaktu)
+        fine.tanggalpinjamadapter.setText(data.tglPinjam.toString())
+        fine.bataswaktupinjamadapter.setText(data.bataswaktu.toString())
         fine.imageView13.setImageResource(R.drawable.peminjaaam_1)
 
     }

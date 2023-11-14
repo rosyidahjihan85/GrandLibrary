@@ -22,8 +22,6 @@ fun getAllBuku():List<DataBuku>
 fun getid (id:Int) : List<DataBuku>
 @Query("SELECT * FROM TB_Pinjam")
 fun getAllPinjam():List<DataPinjam>
-    @Query("SELECT * FROM TB_PINJAM WHERE NIS =:nis")
-    fun getnis (nis:Int) : List<DataPinjam>
-
-
+@Query("SELECT * FROM TB_PINJAM WHERE NIS =:nis")
+fun getnis (nis:Int) : List<DataPinjam>
 }
