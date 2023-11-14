@@ -33,6 +33,8 @@ class InputDatapinjamActivity : AppCompatActivity() {
                         binding.batasWkt.text.toString().toInt()
                     )
                 )
+
+
                 binding.nmPin.setText("")
                 binding.judulPin.setText("")
                 binding.tglPin.setText("")
@@ -44,6 +46,10 @@ class InputDatapinjamActivity : AppCompatActivity() {
                     "silahkan isi data terlebih dahulu",
                     Toast.LENGTH_SHORT).show()
             }
+
+        }
+        binding.backPin.setOnClickListener {
+            startActivity(Intent(this, LoanData::class.java))
         }
     }
 }

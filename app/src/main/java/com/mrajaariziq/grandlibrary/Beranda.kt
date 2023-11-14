@@ -4,8 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.mrajaariziq.grandlibrary.RoomDB.DataBuku
-import com.mrajaariziq.grandlibrary.adapter.Adapterdatabuku
 
 class Beranda : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

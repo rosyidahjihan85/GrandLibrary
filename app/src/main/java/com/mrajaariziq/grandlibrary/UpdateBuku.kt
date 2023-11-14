@@ -53,5 +53,8 @@ class UpdateBuku : AppCompatActivity() {
                 Toast.LENGTH_SHORT).show()
             }
         }
+        binding.backUpBK.setOnClickListener {
+            startActivity(Intent(this, BookData::class.java))
+        }
     }
 }

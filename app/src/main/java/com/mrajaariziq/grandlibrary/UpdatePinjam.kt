@@ -51,5 +51,8 @@ class UpdatePinjam : AppCompatActivity() {
             Toast.LENGTH_SHORT).show()
         }
         }
+        binding.backUpPIN.setOnClickListener {
+            startActivity(Intent(this, LoanData::class.java))
+        }
     }
 }
