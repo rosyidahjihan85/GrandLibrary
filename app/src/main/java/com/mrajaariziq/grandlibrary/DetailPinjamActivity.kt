@@ -17,7 +17,7 @@ class DetailPinjamActivity : AppCompatActivity() {
 
         val nis = intent.getStringExtra("nispinjam").toString().toInt()
         val data = db.librarydao().getnis(nis)[0]
-        fine.namapinjamadapter.setText (data.namaPinjam)
+        fine.namapinjamadapter.setText(data.namaPinjam)
         fine.judulbukupinjamadapter.setText(data.judul)
         fine.tanggalpinjamadapter.setText(data.tglPinjam.toString())
         fine.bataswaktupinjamadapter.setText(data.bataswaktu.toString())

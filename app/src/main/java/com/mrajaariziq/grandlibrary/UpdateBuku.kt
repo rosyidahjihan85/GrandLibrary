@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Toast
 import com.mrajaariziq.grandlibrary.RoomDB.DBLibrary
 import com.mrajaariziq.grandlibrary.RoomDB.DataBuku
-import com.mrajaariziq.grandlibrary.adapter.Adapterdatabuku
 import com.mrajaariziq.grandlibrary.databinding.ActivityInputDatabukuBinding
 import com.mrajaariziq.grandlibrary.databinding.ActivityUpdateBukuBinding
 
