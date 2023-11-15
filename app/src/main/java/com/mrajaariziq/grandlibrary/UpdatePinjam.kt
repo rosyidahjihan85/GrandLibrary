@@ -22,20 +22,19 @@ class UpdatePinjam : AppCompatActivity() {
         val nis = intent.getStringExtra("nispinjam").toString().toInt()
         val data =db.librarydao().getnis(nis)
 
-
         binding.updNmPin.setText(data[0].namaPinjam)
         binding.UpdJdlPin.setText(data[0].judul)
         binding.UpdTglPin.setText(data[0].tglPinjam.toString())
         binding.UpdBatasWkt.setText(data[0].bataswaktu.toString())
         binding.btnUpPin.setOnClickListener {
-        if (binding.updNisPin.text.isNotEmpty()&&
+        if (
+            binding.updNisPin.text.isNotEmpty()&&
             binding.updNmPin.text.isNotEmpty()&&
                 binding.UpdJdlPin.text.isNotEmpty()&&
                 binding.UpdTglPin.text.isNotEmpty()&&
                 binding.UpdBatasWkt.text.isNotEmpty()){
 
-            db.librarydao().updateDataPinjam(DataPinjam(
-                nis,
+            db.librarydao().updateDataPinjam(DataPinjam(nis,
             binding.updNmPin.text.toString(),
             binding.UpdJdlPin.text.toString(),
             binding.UpdTglPin.text.toString().toInt(),
@@ -50,6 +49,9 @@ class UpdatePinjam : AppCompatActivity() {
             Toast.makeText(applicationContext,"Ubah data terlebih dahulu",
             Toast.LENGTH_SHORT).show()
         }
+        }
+        binding.backUpPIN.setOnClickListener {
+            startActivity(Intent(this, LoanData::class.java))
         }
     }
 }

@@ -55,6 +55,9 @@ class InputDatabukuActivity : AppCompatActivity() {
                 ).show() //tes
             }
         }
+        binding.backBk.setOnClickListener {
+            startActivity(Intent(this, BookData::class.java))
+        }
     }
 }
 

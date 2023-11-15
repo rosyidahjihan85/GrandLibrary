@@ -1,6 +1,6 @@
 package com.mrajaariziq.grandlibrary
 
-import android.content.Intent
+import     android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -39,5 +39,7 @@ class Login : AppCompatActivity() {
     }
     private fun alert(msg:String){
         Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
-    }
+
+}
+
 }

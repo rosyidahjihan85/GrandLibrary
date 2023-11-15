@@ -85,15 +85,15 @@
         android:id="@+id/SimpinputPin"
         android:layout_width="328dp"
         android:layout_height="65dp"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="#9AE0C7"
+        android:layout_marginBottom="100dp"
         android:text="Simpan Data"
         android:textColor="#14543D"
         android:textSize="18dp"
+        android:backgroundTint="#9AE0C7"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/batasWkt" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/btneditadapterpinjam"
