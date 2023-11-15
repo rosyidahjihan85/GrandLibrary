@@ -32,7 +32,7 @@ class InputDatapinjamActivity : AppCompatActivity() {
         database = DBLibrary.getInstance(applicationContext)
         binding.SimpinputPin.setOnClickListener {
             if (binding.nmPin.text.isNotEmpty() &&
-                selecteditemjudul !== "pilihjudulbuku" &&
+                selecteditemjudul !== "null" &&
                 binding.tglPin.text.isNotEmpty() &&
                 binding.batasWkt.text.isNotEmpty()
             ) {
