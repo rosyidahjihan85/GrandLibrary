@@ -32,7 +32,7 @@ class InputDatapinjamActivity : AppCompatActivity() {
                     DataPinjam(
                     0,binding.nmPin.text.toString(),
                         binding.judulPin.text.toString(),
-                        binding.tglPin.text.toString().toInt(),
+                        binding.tglPin.text.toString(),
                         binding.batasWkt.text.toString().toInt()
                     )
                 )
