@@ -11,29 +11,18 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="154dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="104dp"
+        android:layout_width="366dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="36dp"
         android:fontFamily="@font/amaranth"
-        android:text="Welcome"
+        android:text="Welcome to Our Library"
+        android:textAlignment="center"
         android:textColor="#14543D"
-        android:textSize="37dp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/welcomie"
-        android:layout_width="159dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="104dp"
-        android:text="User"
-        android:fontFamily="@font/amaranth"
-        android:textColor="#14543D"
-        android:textSize="37dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintStart_toEndOf="@+id/textView" />
 
     <ImageView
         android:id="@+id/imageView3"

@@ -24,8 +24,8 @@
         <entry key="..\:/GrandLibrary/app/src/main/res/drawable/gradasilogin.xml" value="0.1355" />
         <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_beranda.xml" value="0.25" />
         <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_book_data.xml" value="0.20416666666666666" />
-        <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_detail_buku.xml" value="0.34363636363636363" />
-        <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_detail_pinjam.xml" value="0.4151291512915129" />
+        <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_detail_buku.xml" value="0.25" />
+        <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_detail_pinjam.xml" value="0.22" />
         <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_input_databuku.xml" value="0.22" />
         <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_input_datapinjam.xml" value="0.25" />
         <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_loan_data.xml" value="0.20416666666666666" />
