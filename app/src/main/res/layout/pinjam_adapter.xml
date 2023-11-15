@@ -33,14 +33,28 @@
 
             <TextView
                 android:id="@+id/namapengguna"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="241dp"
+                android:layout_height="27dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:text="Nama Pengguna"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/imgbook2"
                 app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/nispinjam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:text="NIS"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+                app:layout_constraintHorizontal_bias="0.323"
+                app:layout_constraintStart_toEndOf="@+id/imgbook2"
+                app:layout_constraintTop_toBottomOf="@+id/namapengguna" />
 
             <LinearLayout
                 android:layout_width="108dp"
