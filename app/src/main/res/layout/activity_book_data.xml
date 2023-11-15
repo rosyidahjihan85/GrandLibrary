@@ -8,14 +8,14 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listdata"
-        android:layout_width="408dp"
-        android:layout_height="602dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="410dp"
+        android:layout_height="603dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.015"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnplusbook"
@@ -32,8 +32,8 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="411dp"
-        android:layout_height="132dp"
+        android:layout_width="413dp"
+        android:layout_height="128dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -76,4 +76,14 @@
         app:layout_constraintStart_toStartOf="@+id/srcLoan"
         app:layout_constraintTop_toTopOf="@+id/srcLoan"
         app:srcCompat="@drawable/frame__3_" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/data_buku" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.mrajaariziq.grandlibrary
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +8,8 @@ import android.widget.Toast
 import com.mrajaariziq.grandlibrary.RoomDB.DBLibrary
 import com.mrajaariziq.grandlibrary.RoomDB.DataPinjam
 import com.mrajaariziq.grandlibrary.databinding.ActivityInputDatapinjamBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
 class InputDatapinjamActivity : AppCompatActivity() {
     private lateinit var binding: ActivityInputDatapinjamBinding
@@ -33,6 +36,8 @@ class InputDatapinjamActivity : AppCompatActivity() {
                         binding.batasWkt.text.toString().toInt()
                     )
                 )
+
+
                 binding.nmPin.setText("")
                 binding.judulPin.setText("")
                 binding.tglPin.setText("")
@@ -44,6 +49,35 @@ class InputDatapinjamActivity : AppCompatActivity() {
                     "silahkan isi data terlebih dahulu",
                     Toast.LENGTH_SHORT).show()
             }
+
         }
+
+        binding.backPin.setOnClickListener {
+            startActivity(Intent(this, LoanData::class.java))
+        }
+        this.setTanggalRegister()
+    }
+    private fun setTanggalRegister(){
+        this.setTanggal()
+        binding.tglPin.setOnClickListener {
+            var cal = Calendar.getInstance()
+            val year = cal.get(Calendar.YEAR)
+            val month = cal.get(Calendar.MONTH)
+            val day = cal.get(Calendar.DAY_OF_MONTH)
+            val datePickerDialog = DatePickerDialog(
+                this,
+                DatePickerDialog.OnDateSetListener{ picker, tahun, bulan, tanggal ->
+                    binding.tglPin.setText("" + tanggal + "-" + bulan + "-" + tahun)
+                }, year, month, day
+
+            )
+            datePickerDialog.show()
+        }
+    }
+    private fun setTanggal(){
+        val calendar = Calendar.getInstance()
+        val simpleDateFormat = SimpleDateFormat("d-M-yyyy")
+        val dateTime = simpleDateFormat.format(calendar.time)
+        binding.tglPin.setText(dateTime)
     }
 }
