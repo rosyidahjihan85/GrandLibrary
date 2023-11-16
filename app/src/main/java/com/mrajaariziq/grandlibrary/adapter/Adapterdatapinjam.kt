@@ -20,11 +20,7 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener :OnAdapter
         val HAPUS = itemView.findViewById<ImageView>(R.id.btnhapusadapterpinjam)
         val EDIT = itemView.findViewById<ImageView>(R.id.btneditadapterpinjam)
         val detail = itemView.findViewById<ImageView>(R.id.imgbook2)
-
-
     }
-
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
@@ -32,9 +28,6 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener :OnAdapter
                 R.layout.pinjam_adapter, parent, false
             )
         )
-
-
-
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -50,9 +43,7 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener :OnAdapter
             val intent= Intent(context, DetailPinjamActivity::class.java).putExtra("nispinjam", list[position].nisPinjam.toString())
             context.startActivity(intent)
         }
-
     }
-
     override fun getItemCount(): Int {
         return list.size
     }
@@ -65,6 +56,4 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener :OnAdapter
         fun onedit(dataPinjam: DataPinjam)
 
     }
-
-
 }

@@ -9,7 +9,6 @@ import androidx.room.RoomDatabase
 abstract class DBLibrary :RoomDatabase() {
     abstract fun librarydao():LibraryDAO
 
-
     companion object{
         @Volatile
         private var instance :DBLibrary? = null
