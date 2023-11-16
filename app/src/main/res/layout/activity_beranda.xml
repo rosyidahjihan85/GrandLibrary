@@ -11,9 +11,9 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="362dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="72dp"
+        android:layout_width="367dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="84dp"
         android:fontFamily="@font/amaranth"
         android:text="Welcome to Our Library"
         android:textAlignment="center"
@@ -21,24 +21,23 @@
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.644"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/usernma"
-        android:layout_width="317dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="370dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="36dp"
         android:fontFamily="@font/amaranth"
-        android:text="user"
+        android:text="User"
         android:textAlignment="center"
         android:textColor="#14543D"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintHorizontal_bias="0.707"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView3"
