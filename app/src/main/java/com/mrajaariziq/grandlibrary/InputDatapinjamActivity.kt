@@ -11,6 +11,7 @@ import android.widget.Toast
 import com.mrajaariziq.grandlibrary.RoomDB.DBLibrary
 import com.mrajaariziq.grandlibrary.RoomDB.DataPinjam
 import com.mrajaariziq.grandlibrary.databinding.ActivityInputDatapinjamBinding
+import java.text.FieldPosition
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -18,8 +19,7 @@ class InputDatapinjamActivity : AppCompatActivity() {
     private lateinit var binding: ActivityInputDatapinjamBinding
     private lateinit var database: DBLibrary
     private lateinit var selecteditemjudul: String
-    private var opsijudul: String = "null"
-    private var opJudul: String = "0"
+    private var opsijudul: String = "Pilih judul buku"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,10 +39,10 @@ class InputDatapinjamActivity : AppCompatActivity() {
 
                 database.librarydao().insertDataPinjam(
                     DataPinjam(
-                        0, binding.nmPin.text.toString(),
+                        0,binding.nmPin.text.toString(),
                         selecteditemjudul,
                         binding.tglPin.text.toString(),
-                        binding.batasWkt.text.toString().toInt()
+                        binding.batasWkt.text.toString()
                     )
                 )
 
@@ -60,23 +60,23 @@ class InputDatapinjamActivity : AppCompatActivity() {
                 ).show()
             }
 
-            val datajudulbuku = database.librarydao().getspinner()
-            val databaru = arrayOf("pilihjudulbuku") + datajudulbuku
+            //set spinner judul
+            val datajudul = database.librarydao().getspinner()
+            val databaru = arrayOf("Pilih judul buku") + datajudul
             val spnjudul = binding.pilihbuku
             val spnjuduladapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, databaru)
             spnjuduladapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line)
             spnjudul.adapter = spnjuduladapter
-            spnjudul.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
+            spnjudul.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
                 override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                     selecteditemjudul = parent?.getItemAtPosition(position).toString()
+
                 }
 
                 override fun onNothingSelected(p0: AdapterView<*>?) {
                     TODO("Not yet implemented")
                 }
             }
-
             val indexspnjudul = if (opsijudul == "null") 0 else databaru.indexOf(opsijudul)
             spnjudul.setSelection(indexspnjudul)
         }

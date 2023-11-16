@@ -16,6 +16,6 @@ data class DataPinjam(
     @ColumnInfo(name = "TanggalPinjam")
     val tglPinjam: String,
     @ColumnInfo(name = "TanggalPengembalian")
-    val bataswaktu: Int
+    val bataswaktu: String
 
 )

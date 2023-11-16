@@ -15,7 +15,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
         setContentView(finding.root)
 
-    finding.imgbook.setOnClickListener{onBackPressed()}
+    finding.btnbck.setOnClickListener{onBackPressed()}
 
     val id = intent.getStringExtra("idbuku").toString().toInt()
 

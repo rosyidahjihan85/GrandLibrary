@@ -15,6 +15,8 @@ class DetailPinjamActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(fine.root)
 
+        fine.btnbck2.setOnClickListener{onBackPressed()}
+
         val nis = intent.getStringExtra("nispinjam").toString().toInt()
         val data = db.librarydao().getnis(nis)[0]
         fine.namapinjamadapter.setText(data.namaPinjam)

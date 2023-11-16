@@ -24,8 +24,8 @@ class UpdatePinjam : AppCompatActivity() {
 
         binding.updNmPin.setText(data[0].namaPinjam)
         binding.UpdJdlPin.setText(data[0].judul)
-        binding.UpdTglPin.setText(data[0].tglPinjam.toString())
-        binding.UpdBatasWkt.setText(data[0].bataswaktu.toString())
+        binding.UpdTglPin.setText(data[0].tglPinjam)
+        binding.UpdBatasWkt.setText(data[0].bataswaktu)
         binding.btnUpPin.setOnClickListener {
         if (
             binding.updNisPin.text.isNotEmpty()&&
@@ -38,7 +38,7 @@ class UpdatePinjam : AppCompatActivity() {
             binding.updNmPin.text.toString(),
             binding.UpdJdlPin.text.toString(),
             binding.UpdTglPin.text.toString(),
-            binding.UpdBatasWkt.text.toString().toInt()))
+            binding.UpdBatasWkt.text.toString()))
 
             Toast.makeText(applicationContext,"Data berhasil di ubah",
             Toast.LENGTH_SHORT).show()
