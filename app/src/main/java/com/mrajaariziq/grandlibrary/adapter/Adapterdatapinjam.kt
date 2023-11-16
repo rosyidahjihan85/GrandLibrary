@@ -19,7 +19,7 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener :OnAdapter
         val HAPUS = itemView.findViewById<ImageView>(R.id.btnhapusadapterpinjam)
         val EDIT = itemView.findViewById<ImageView>(R.id.btneditadapterpinjam)
         val detail = itemView.findViewById<ImageView>(R.id.imgbook2)
-            val NIS = itemView.findViewById<TextView>(R.id.nispinjam)
+        val NIS = itemView.findViewById<TextView>(R.id.nispinjam)
 
 
     }

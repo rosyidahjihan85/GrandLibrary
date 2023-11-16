@@ -44,8 +44,6 @@ class BookData : AppCompatActivity() {
                     EditData(dataBuku)
                 }
 
-
-
             }
         )
 

@@ -24,7 +24,6 @@ class Adapterdatabuku(val list: ArrayList<DataBuku>, var listener:OnAdapterListe
         var detail = itemView.findViewById<ImageView>(R.id.imgbook1)
 
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             LayoutInflater.from(parent.context).inflate(
@@ -50,7 +49,6 @@ class Adapterdatabuku(val list: ArrayList<DataBuku>, var listener:OnAdapterListe
             val intent = Intent(context, DetailBukuActivity::class.java).putExtra("idbuku", list[position].idBuku.toString())
             context.startActivity(intent)
         }
-
 
     }
 
