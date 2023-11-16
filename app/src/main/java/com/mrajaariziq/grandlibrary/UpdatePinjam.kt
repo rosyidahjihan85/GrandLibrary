@@ -37,7 +37,7 @@ class UpdatePinjam : AppCompatActivity() {
             db.librarydao().updateDataPinjam(DataPinjam(nis,
             binding.updNmPin.text.toString(),
             binding.UpdJdlPin.text.toString(),
-            binding.UpdTglPin.text.toString().toInt(),
+            binding.UpdTglPin.text.toString(),
             binding.UpdBatasWkt.text.toString().toInt()))
 
             Toast.makeText(applicationContext,"Data berhasil di ubah",

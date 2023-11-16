@@ -18,9 +18,11 @@ class Adapterdatabuku(val list: ArrayList<DataBuku>, var listener:OnAdapterListe
     RecyclerView.Adapter<Adapterdatabuku.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var judul = itemView.findViewById<TextView>(R.id.jdlbuku)
+        val id = itemView.findViewById<TextView>(R.id.id)
         var edit = itemView.findViewById<ImageView>(R.id.imgedit)
         var hapus = itemView.findViewById<ImageView>(R.id.imghps)
         var detail = itemView.findViewById<ImageView>(R.id.imgbook1)
+
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
@@ -32,6 +34,7 @@ class Adapterdatabuku(val list: ArrayList<DataBuku>, var listener:OnAdapterListe
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.judul.text = list[position].judulBk
+        holder.id.text = list[position].idBuku.toString()
         //step 4 membuat holder
         holder.hapus.setOnClickListener{
             listener.ondelete(list[position])

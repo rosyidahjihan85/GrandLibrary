@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mrajaariziq.grandlibrary.DetailPinjamActivity
 import com.mrajaariziq.grandlibrary.R
 import com.mrajaariziq.grandlibrary.RoomDB.DataPinjam
-import com.mrajaariziq.grandlibrary.UpdatePinjam
 
 class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener :OnAdapterLinstener)
     :RecyclerView.Adapter<Adapterdatapinjam.ViewHolder>() {
@@ -20,7 +19,12 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener :OnAdapter
         val HAPUS = itemView.findViewById<ImageView>(R.id.btnhapusadapterpinjam)
         val EDIT = itemView.findViewById<ImageView>(R.id.btneditadapterpinjam)
         val detail = itemView.findViewById<ImageView>(R.id.imgbook2)
+            val NIS = itemView.findViewById<TextView>(R.id.nispinjam)
+
+
     }
+
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
@@ -28,10 +32,14 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener :OnAdapter
                 R.layout.pinjam_adapter, parent, false
             )
         )
+
+
+
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.NAMAPENGGUNA.text = list[position].namaPinjam
+        holder.NIS.text = list[position].nisPinjam.toString()
         holder.HAPUS.setOnClickListener {
             listener.onhapus(list[position])
         }
@@ -43,7 +51,9 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener :OnAdapter
             val intent= Intent(context, DetailPinjamActivity::class.java).putExtra("nispinjam", list[position].nisPinjam.toString())
             context.startActivity(intent)
         }
+
     }
+
     override fun getItemCount(): Int {
         return list.size
     }
@@ -56,4 +66,6 @@ class Adapterdatapinjam(val list: ArrayList<DataPinjam>, var listener :OnAdapter
         fun onedit(dataPinjam: DataPinjam)
 
     }
+
+
 }

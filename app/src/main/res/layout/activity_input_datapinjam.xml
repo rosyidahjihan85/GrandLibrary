@@ -33,10 +33,10 @@
         app:layout_constraintTop_toBottomOf="@+id/imgbook1" />
 
     <EditText
-        android:id="@+id/judulPin"
+        android:id="@+id/judul"
         android:layout_width="360dp"
         android:layout_height="60dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="152dp"
         android:background="@drawable/yy"
         android:ems="10"
         android:hint="Judul Buku"
@@ -45,7 +45,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nmPin" />
+        app:layout_constraintTop_toBottomOf="@+id/imgbook1"
+        tools:ignore="DuplicateClickableBoundsCheck" />
 
     <EditText
         android:id="@+id/tglPin"
@@ -60,7 +61,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/judulPin" />
+        app:layout_constraintTop_toBottomOf="@+id/judul" />
 
     <EditText
         android:id="@+id/batasWkt"
@@ -112,6 +113,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+    <Spinner
+        android:id="@+id/pilihbuku"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/judul"
+        app:layout_constraintStart_toStartOf="@+id/judul"
+        app:layout_constraintTop_toTopOf="@+id/judul"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

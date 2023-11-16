@@ -3,32 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/penerbitadapter"
+    android:background="@drawable/gradasilogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="411dp"
+        android:layout_height="413dp"
+        android:background="@drawable/gradasilogin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <ImageView
         android:id="@+id/imgbook"
-        android:layout_width="414dp"
-        android:layout_height="355dp"
+        android:layout_width="416dp"
+        android:layout_height="317dp"
+        android:layout_marginBottom="433dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logobukuuuuu_1" />
-
-    <TextView
-
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="20dp"
-        android:text="ID Buku          :"
-        android:textColor="#043A27"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgbook" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logobukuuuuu_1" />
 
     <TextView
 
@@ -36,14 +42,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="70dp"
         android:text="Judul Buku    :"
         android:textColor="#043A27"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/imgbook" />
 
     <TextView
 
@@ -51,12 +57,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:text="Pengarang     :"
         android:textColor="#043A27"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -69,7 +75,7 @@
         android:layout_marginTop="20dp"
         android:text="Penerbit         :"
         android:textColor="#043A27"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,63 +83,63 @@
 
     <TextView
 
-        android:id="@+id/idbukuadapter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="20dp"
-        android:text="ID Bukuuu"
+        android:id="@+id/judulbukuadapter"
+        android:layout_width="222dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:text="Judul Bukuuu "
         android:textColor="#043A27"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.038"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/imgbook" />
 
     <TextView
 
-        android:id="@+id/judulbukuadapter"
-        android:layout_width="228dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="20dp"
-        android:text="Judul Bukuuu "
-        android:textColor="#043A27"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/idbukuadapter" />
-
-    <TextView
-
         android:id="@+id/pengarangadapter"
-        android:layout_width="225dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="1dp"
+        android:layout_width="229dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:text="Pengaranguu "
         android:textColor="#043A27"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/judulbukuadapter" />
 
     <TextView
 
         android:id="@+id/penerbit"
-        android:layout_width="225dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="1dp"
+        android:layout_width="232dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:text="Penerbituu "
+        android:text=" Penerbituu "
         android:textColor="#043A27"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/pengarangadapter" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="318dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="268dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Detail Buku"
+        android:textAlignment="center"
+        android:textColor="#043A27"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgbook" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
