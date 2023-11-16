@@ -19,7 +19,7 @@ class InputDatapinjamActivity : AppCompatActivity() {
     private lateinit var database: DBLibrary
     private lateinit var selecteditemjudul: String
     private var opsijudul: String = "null"
-    private var opJudul: String = "0"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
