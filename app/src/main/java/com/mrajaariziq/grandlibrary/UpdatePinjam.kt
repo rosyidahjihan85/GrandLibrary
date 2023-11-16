@@ -28,7 +28,6 @@ class UpdatePinjam : AppCompatActivity() {
         binding.UpdBatasWkt.setText(data[0].bataswaktu)
         binding.btnUpPin.setOnClickListener {
         if (
-            binding.updNisPin.text.isNotEmpty()&&
             binding.updNmPin.text.isNotEmpty()&&
                 binding.UpdJdlPin.text.isNotEmpty()&&
                 binding.UpdTglPin.text.isNotEmpty()&&

@@ -105,9 +105,10 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/yy"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nmPin"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,DuplicateClickableBoundsCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
