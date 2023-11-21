@@ -43,8 +43,8 @@
         <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_loan_data.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_update_buku.xml" value="0.33" />
-        <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_update_pinjam.xml" value="0.5" />
+        <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_update_buku.xml" value="0.25" />
+        <entry key="..\:/GrandLibrary/app/src/main/res/layout/activity_update_pinjam.xml" value="0.25" />
         <entry key="..\:/GrandLibrary/app/src/main/res/layout/adapterdatabuku.xml" value="0.22" />
         <entry key="..\:/GrandLibrary/app/src/main/res/layout/detail_adapter.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandLibrary/app/src/main/res/layout/detail_adapterpinjam.xml" value="0.20416666666666666" />
